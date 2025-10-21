@@ -1,0 +1,116 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-gray-3);
+  z-index: 1000;
+  transition: var(--transition-normal);
+}
+
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+/* Desktop Navigation */
+.nav {
+  display: flex;
+  gap: var(--spacing-xl);
+}
+
+.navItem {
+  position: relative;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-dark-gray-1);
+  text-decoration: none;
+  padding: var(--spacing-sm) 0;
+  transition: var(--transition-fast);
+}
+
+.navItem:hover {
+  color: var(--color-primary);
+}
+
+.navItem.active {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Mobile Menu Button */
+.menuButton {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  padding: var(--spacing-sm);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menuButton span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-dark-gray-1);
+  transition: var(--transition-fast);
+}
+
+.menuButton:hover span {
+  background-color: var(--color-primary);
+}
+
+/* Responsive - Mobile */
+@media (max-width: 768px) {
+  .container {
+    height: 60px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .menuButton {
+    display: flex;
+  }
+
+  /* Mobile Menu Open State */
+  .header.menuOpen .nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-gray-3);
+    padding: var(--spacing-lg) var(--container-padding);
+    gap: var(--spacing-md);
+  }
+
+  .header.menuOpen .menuButton span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+  }
+
+  .header.menuOpen .menuButton span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .header.menuOpen .menuButton span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+}

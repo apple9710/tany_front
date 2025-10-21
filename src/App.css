@@ -1,0 +1,23 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+.content {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: var(--spacing-3xl) var(--container-padding);
+  min-height: 400px;
+}
+
+.content p {
+  text-align: center;
+  font-size: var(--font-size-h3);
+  color: var(--color-gray-3);
+  margin-top: var(--spacing-2xl);
+}
