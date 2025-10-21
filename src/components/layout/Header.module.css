@@ -16,30 +16,41 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
+  height: 100px;
 }
 
+/* 로고 - 왼쪽 정렬 */
 .logo {
-  font-size: 24px;
-  font-weight: var(--font-weight-bold);
-  color: var(--color-primary);
+  display: flex;
+  align-items: center;
   text-decoration: none;
+  flex-shrink: 0;
 }
 
-/* Desktop Navigation */
+.logoImage {
+  width: 103px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* 네비게이션 - 가운데 정렬 */
 .nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  gap: var(--spacing-xl);
+  gap: 112px;
 }
 
 .navItem {
   position: relative;
-  font-size: var(--font-size-body);
-  font-weight: var(--font-weight-medium);
-  color: var(--color-dark-gray-1);
+  font-size: 22px;
+  font-weight: 600;
+  color: #707070;
   text-decoration: none;
   padding: var(--spacing-sm) 0;
   transition: var(--transition-fast);
+  white-space: nowrap;
 }
 
 .navItem:hover {
@@ -51,15 +62,16 @@
   font-weight: var(--font-weight-semibold);
 }
 
-/* Mobile Menu Button */
+/* 햄버거 메뉴 - 오른쪽 정렬 (기능 없음) */
 .menuButton {
-  display: none;
+  display: flex;
   flex-direction: column;
   gap: 6px;
   padding: var(--spacing-sm);
   background: none;
   border: none;
   cursor: pointer;
+  flex-shrink: 0;
 }
 
 .menuButton span {
@@ -74,43 +86,10 @@
   background-color: var(--color-primary);
 }
 
-/* Responsive - Mobile */
-@media (max-width: 768px) {
-  .container {
-    height: 60px;
-  }
-
+/* Responsive - Tablet & Mobile */
+@media (max-width: 1024px) {
+  /* 네비게이션 숨김 */
   .nav {
     display: none;
-  }
-
-  .menuButton {
-    display: flex;
-  }
-
-  /* Mobile Menu Open State */
-  .header.menuOpen .nav {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    background-color: var(--color-white);
-    border-bottom: 1px solid var(--color-gray-3);
-    padding: var(--spacing-lg) var(--container-padding);
-    gap: var(--spacing-md);
-  }
-
-  .header.menuOpen .menuButton span:nth-child(1) {
-    transform: rotate(45deg) translate(8px, 8px);
-  }
-
-  .header.menuOpen .menuButton span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .header.menuOpen .menuButton span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
   }
 }

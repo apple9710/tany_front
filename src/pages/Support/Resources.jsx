@@ -1,0 +1,31 @@
+import SubPageBanner from '../../components/layout/SubPageBanner'
+import PageTitle from '../../components/common/PageTitle'
+import styles from './Resources.module.css'
+
+const Resources = () => {
+  const subMenuItems = [
+    { path: '/support/inquiry', label: '온라인 문의' },
+    { path: '/support/resources', label: '자료실' },
+    { path: '/support/blog', label: '블로그' },
+    { path: '/support/instagram', label: '인스타그램' }
+  ]
+
+  return (
+    <div className={styles.page}>
+      <SubPageBanner
+        backgroundImage="/src/assets/images/sub_Resources_banner_img.png"
+        titleEn="SUPPORT"
+        titleKo="고객지원"
+        subMenuItems={subMenuItems}
+      />
+
+      <main className={styles.content}>
+        <div className={styles.container}>
+          <PageTitle titleEn="RESOURCES" titleKo="자료실" />
+        </div>
+      </main>
+    </div>
+  )
+}
+
+export default Resources

@@ -1,0 +1,131 @@
+.section {
+  padding-top: 132px;
+  padding-bottom: 104px;
+}
+
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  text-align: center;
+}
+
+/* 주제목 */
+.title {
+  font-size: 38px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: #1D1D1D;
+  margin-bottom: 13px;
+  margin-top: 0;
+}
+
+/* 부제목 */
+.subtitle {
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: #707070;
+  margin-bottom: 61px;
+  margin-top: 0;
+}
+
+/* 탭 버튼들 */
+.tabButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 38px;
+  margin-bottom: 60px;
+}
+
+.tabButton {
+  width: 159px;
+  height: 49px;
+  border: 0.5px solid #F26966;
+  border-radius: 9999px;
+  background-color: #FFFFFF;
+  color: #F26966;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.tabButton.activeTab {
+  background-color: #F26966;
+  color: #FFFFFF;
+}
+
+/* 탭 컨텐츠 */
+.tabContent {
+  padding: 60px 62px;
+  border: 0.5px solid #484848;
+  border-radius: 15px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.contentLeft {
+  flex: 1;
+  text-align: center;
+}
+
+/* 컨텐츠 타이틀 */
+.contentTitle {
+  font-size: 38px;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  margin-bottom: 40px;
+  margin-top: 0;
+}
+
+/* 구분선 */
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #F26966;
+  margin-bottom: 36.5px;
+}
+
+/* 설명 텍스트 */
+.description {
+  color: #707070;
+  font-size: 22px;
+  line-height: 38px;
+  margin-bottom: 35px;
+  margin-top: 0;
+  white-space: pre-line;
+}
+
+/* 버튼 */
+.button {
+  width: 300px;
+  height: 70px;
+  border: 0.5px solid #F26966;
+  border-radius: 9999px;
+  background-color: #FFFFFF;
+  color: #F26966;
+  font-size: 26px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.button:hover {
+  background-color: #F26966;
+  color: #FFFFFF;
+}
+
+/* 이미지 영역 */
+.imageArea {
+  max-width: 788px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 15px;
+  border: 1px solid #707070;
+}

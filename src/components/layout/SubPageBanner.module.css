@@ -1,0 +1,90 @@
+.banner {
+  height: 480px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+/* 배경 이미지 */
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+/* 검은색 오버레이 */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+/* 타이틀 영역 */
+.titleArea {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 3;
+}
+
+.titleEn {
+  font-size: 40px;
+  font-weight: 400;
+  color: #FFFFFF;
+  margin: 0;
+  text-align: center;
+}
+
+.titleKo {
+  font-size: 40px;
+  font-weight: 400;
+  color: #FFFFFF;
+  margin: 0;
+  text-align: center;
+}
+
+/* 서브 메뉴 */
+.subMenu {
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.subMenuContainer {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  display: flex;
+  gap: 120px;
+  align-items: center;
+  justify-content: center;
+}
+
+.subMenuItem {
+  font-size: 22px;
+  font-weight: 400;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.subMenuItem.active {
+  color: #F26966;
+}

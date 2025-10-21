@@ -1,71 +1,63 @@
-import { Link } from 'react-router-dom'
 import styles from './Footer.module.css'
 
 const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
-        <div className={styles.content}>
-          {/* 회사 정보 */}
-          <div className={styles.section}>
-            <h3 className={styles.title}>TANY</h3>
-            <div className={styles.info}>
-              <p><strong>회사명:</strong> 타니(주)</p>
-              <p><strong>대표:</strong> 홍길동</p>
-              <p><strong>사업자등록번호:</strong> 123-45-67890</p>
-              <p><strong>주소:</strong> 서울특별시 강남구 테헤란로 123</p>
-            </div>
+        {/* 로고 */}
+        <img
+          src="/src/assets/images/logo_white.svg"
+          alt="TANY"
+          className={styles.logo}
+        />
+
+        {/* 회사 정보 */}
+        <div className={styles.info}>
+          {/* 첫 번째 줄 */}
+          <div className={styles.infoRow}>
+            <span className={styles.infoItem}>
+              <span className={styles.label}>상호</span>
+              <span className={styles.value}>(주)타니</span>
+            </span>
+            <span className={styles.infoItem}>
+              <span className={styles.label}>대표이사</span>
+              <span className={styles.value}>김현식</span>
+            </span>
+            <span className={styles.infoItem}>
+              <span className={styles.label}>전화</span>
+              <span className={styles.value}>010-2482-4435</span>
+            </span>
+            <span className={styles.infoItem}>
+              <span className={styles.label}>이메일</span>
+              <span className={styles.value}>beaurifulhappy@naver.com</span>
+            </span>
           </div>
 
-          {/* 연락처 */}
-          <div className={styles.section}>
-            <h3 className={styles.title}>Contact</h3>
-            <div className={styles.info}>
-              <p><strong>전화:</strong> 02-1234-5678</p>
-              <p><strong>팩스:</strong> 02-1234-5679</p>
-              <p><strong>이메일:</strong> info@tany.com</p>
-              <p><strong>영업시간:</strong> 평일 09:00 - 18:00</p>
-            </div>
-          </div>
-
-          {/* 빠른 링크 */}
-          <div className={styles.section}>
-            <h3 className={styles.title}>Quick Links</h3>
-            <div className={styles.linkList}>
-              <Link to="/about" className={styles.link}>기업소개</Link>
-              <Link to="/products" className={styles.link}>제품소개</Link>
-              <Link to="/references" className={styles.link}>레퍼런스</Link>
-              <Link to="/support/inquiry" className={styles.link}>온라인문의</Link>
-            </div>
+          {/* 두 번째 줄 */}
+          <div className={styles.infoRow}>
+            <span className={styles.infoItem}>
+              <span className={styles.label}>서울지사</span>
+              <span className={styles.value}>서울특별시 강남구 선릉로 704, 상가동 12층 1235-3호 청담벤처프라자</span>
+            </span>
+            <span className={styles.infoItem}>
+              <span className={styles.label}>대전지사</span>
+              <span className={styles.value}>대전광역시 중구 오류동 199-1 킹콩LED</span>
+            </span>
+            <span className={styles.infoItem}>
+              <span className={styles.label}>전주지사</span>
+              <span className={styles.value}>전북 전주시 덕진구 기린대로 281, 1층, 2층</span>
+            </span>
+            <span className={styles.infoItem}>
+              <span className={styles.label}>공장</span>
+              <span className={styles.value}>전북 김제시 월촌공단길 33, 1동, 2동(월촌농공단지)</span>
+            </span>
           </div>
         </div>
 
-        {/* 하단 영역 */}
-        <div className={styles.bottom}>
-          <p className={styles.copyright}>
-            © 2025 TANY. All rights reserved.
-          </p>
-          <div className={styles.socialLinks}>
-            <a
-              href="https://blog.naver.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.socialLink}
-              aria-label="블로그"
-            >
-              B
-            </a>
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.socialLink}
-              aria-label="인스타그램"
-            >
-              I
-            </a>
-          </div>
-        </div>
+        {/* 카피라이트 */}
+        <p className={styles.copyright}>
+          ⓒ 2025 (주)타니 All Rights Reserved.
+        </p>
       </div>
     </footer>
   )

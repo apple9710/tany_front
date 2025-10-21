@@ -1,0 +1,160 @@
+.timeline {
+  margin-top: 114px;
+  position: relative;
+  max-width: 1028px;
+  padding-left: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 메인 세로선 */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: #8D8D8D;
+}
+
+/* 연도별 섹션 */
+.yearSection {
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.yearSection:last-child {
+  margin-bottom: 0;
+}
+
+/* 연도 헤더 */
+.yearHeader {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+/* 연도에서 세로선까지 가로선 */
+.yearHeader::before {
+  content: '';
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 1px;
+  background-color: #8D8D8D;
+}
+
+/* 활성 점 (세로선 위) */
+.yearHeader::after {
+  content: '';
+  position: absolute;
+  right: calc(100% + 35px);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: #F26966;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+/* 연도 */
+.year {
+  font-size: 38px;
+  color: #F26966;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* 활성 점 - 사용 안 함 (::after로 대체) */
+.dotActive {
+  display: none;
+}
+
+/* 내용 래퍼 */
+.contentWrapper {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  position: relative;
+}
+
+/* 이벤트 리스트 */
+.eventList {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* 이벤트 아이템 */
+.eventItem {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 20px;
+}
+
+/* 세로선에서 점까지 가로선 */
+.eventItem::before {
+  content: '';
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 1px;
+  background-color: #8D8D8D;
+}
+
+/* 회색 점 */
+.dotGray {
+  position: absolute;
+  right: calc(100% + 35px);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: #8D8D8D;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+/* 날짜 */
+.date {
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: #8D8D8D;
+  min-width: 60px;
+}
+
+/* 설명 */
+.description {
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: #8D8D8D;
+}
+
+/* 이미지 영역 */
+.imageArea {
+  width: 400px;
+  height: 310px;
+  border-radius: 15px;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 0.5px solid #8D8D8D;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

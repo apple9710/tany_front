@@ -1,0 +1,147 @@
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slideContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  pointer-events: none;
+}
+
+.slide.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.slideImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slideContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+}
+
+.slideText {
+  font-size: 38px;
+  font-weight: 400;
+  color: #FFFFFF;
+  letter-spacing: -0.03em;
+  margin: 0;
+  white-space: pre-line;
+}
+
+/* 네비게이션 버튼 */
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  padding: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.navButton:hover {
+  opacity: 0.8;
+}
+
+.navButton img {
+  display: block;
+  width: auto;
+  height: auto;
+}
+
+/* 이전 버튼 - 중앙에서 왼쪽으로 720px */
+.prevButton {
+  left: calc(50% - 720px);
+}
+
+/* 다음 버튼 - 중앙에서 오른쪽으로 720px */
+.nextButton {
+  right: calc(50% - 720px);
+}
+
+/* 인디케이터 */
+.indicators {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 10;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  padding: 0;
+}
+
+.indicator:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.indicator.activeIndicator {
+  background-color: #FFFFFF;
+  width: 32px;
+  border-radius: 6px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .prevButton {
+    left: 20px;
+  }
+
+  .nextButton {
+    right: 20px;
+  }
+
+  .slideText {
+    font-size: 36px;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    height: 60vh;
+  }
+
+  .slideText {
+    font-size: 24px;
+  }
+
+  .navButton img {
+    width: 40px;
+  }
+}

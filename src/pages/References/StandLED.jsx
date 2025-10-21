@@ -1,0 +1,46 @@
+import SubPageBanner from '../../components/layout/SubPageBanner'
+import PageTitle from '../../components/common/PageTitle'
+import ReferenceGrid from '../../components/features/references/ReferenceGrid'
+import styles from './StandLED.module.css'
+
+const StandLED = () => {
+  const subMenuItems = [
+    { path: '/references/led-cases', label: 'LED전광판' },
+    { path: '/references/stand-led', label: '스탠드 전광판' }
+  ]
+
+  const referenceData = [
+    { title: '(주)타니 1, 2층 실외 LED 전광판', image: '/src/assets/images/demo_refImg.png' },
+    { title: '(주)타니 1, 2층 실외 LED 전광판', image: '/src/assets/images/demo_refImg.png' },
+    { title: '(주)타니 1, 2층 실외 LED 전광판', image: '/src/assets/images/demo_refImg.png' },
+    { title: '(주)타니 1, 2층 실외 LED 전광판', image: '/src/assets/images/demo_refImg.png' },
+    { title: '(주)타니 1, 2층 실외 LED 전광판', image: '/src/assets/images/demo_refImg.png' },
+    { title: '(주)타니 1, 2층 실외 LED 전광판', image: '/src/assets/images/demo_refImg.png' },
+    { title: '(주)타니 1, 2층 실외 LED 전광판', image: '/src/assets/images/demo_refImg.png' },
+    { title: '(주)타니 1, 2층 실외 LED 전광판', image: '/src/assets/images/demo_refImg.png' },
+    { title: '(주)타니 1, 2층 실외 LED 전광판', image: '/src/assets/images/demo_refImg.png' },
+    { title: '(주)타니 1, 2층 실외 LED 전광판', image: '/src/assets/images/demo_refImg.png' },
+    { title: '(주)타니 1, 2층 실외 LED 전광판', image: '/src/assets/images/demo_refImg.png' },
+    { title: '(주)타니 1, 2층 실외 LED 전광판', image: '/src/assets/images/demo_refImg.png' }
+  ]
+
+  return (
+    <div className={styles.page}>
+      <SubPageBanner
+        backgroundImage="/src/assets/images/sub_StandLED_banner_img.png"
+        titleEn="REFERENCE"
+        titleKo="래퍼런스"
+        subMenuItems={subMenuItems}
+      />
+
+      <main className={styles.content}>
+        <div className={styles.container}>
+          <PageTitle titleEn="STAND DISPLAY SERIES REFERENCE" titleKo="스탠드 전광판 설치사례" />
+          <ReferenceGrid data={referenceData} />
+        </div>
+      </main>
+    </div>
+  )
+}
+
+export default StandLED

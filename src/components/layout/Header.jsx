@@ -14,20 +14,21 @@ const Header = () => {
   }
 
   const navItems = [
-    { path: '/', label: '메인' },
-    { path: '/about', label: '기업소개' },
-    { path: '/products', label: '제품소개' },
-    { path: '/references', label: '레퍼런스' },
-    { path: '/support', label: '고객지원' },
+    { path: '/about/history', label: '기업소개' },
+    { path: '/products/indoor-led', label: '제품소개' },
+    { path: '/references/led-cases', label: '레퍼런스' },
+    { path: '/support/inquiry', label: '고객지원' },
   ]
 
   return (
     <header className={`${styles.header} ${isMenuOpen ? styles.menuOpen : ''}`}>
       <div className={styles.container}>
+        {/* 로고 - 왼쪽 */}
         <Link to="/" className={styles.logo} onClick={closeMenu}>
-          TANY
+          <img src="/src/assets/images/logo.png" alt="TANY" className={styles.logoImage} />
         </Link>
 
+        {/* 네비게이션 - 가운데 */}
         <nav className={styles.nav}>
           {navItems.map((item) => (
             <NavLink
@@ -43,10 +44,10 @@ const Header = () => {
           ))}
         </nav>
 
+        {/* 햄버거 메뉴 - 오른쪽 (기능 없음) */}
         <button
           className={styles.menuButton}
-          onClick={toggleMenu}
-          aria-label="메뉴 열기/닫기"
+          aria-label="메뉴"
         >
           <span></span>
           <span></span>

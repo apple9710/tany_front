@@ -1,0 +1,35 @@
+.section {
+  height: 1000px;
+  background-image: url('/src/assets/images/main_sec04_img.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  text-align: center;
+}
+
+/* 타이틀 */
+.title {
+  font-size: 50px;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 70px;
+  margin-bottom: 92px;
+  color: #FFFFFF;
+  margin-top: 0;
+}
+
+/* 설명 */
+.description {
+  font-size: 26px;
+  line-height: 34px;
+  letter-spacing: -0.03em;
+  font-weight: 400;
+  color: #FFFFFF;
+  margin: 0;
+}

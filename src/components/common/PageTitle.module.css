@@ -1,0 +1,30 @@
+.titleWrapper {
+  text-align: center;
+}
+
+/* 주제목 (영어) */
+.titleEn {
+  font-size: 38px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: #101010;
+  margin-bottom: 13px;
+  margin-top: 0;
+}
+
+/* 부제목 (한글) */
+.titleKo {
+  font-size: 28px;
+  color: #707070;
+  font-weight: 500;
+  margin-bottom: 56px;
+  margin-top: 0;
+}
+
+/* 구분선 */
+.divider {
+  width: 375px;
+  height: 1px;
+  background-color: #F26966;
+  margin: 0 auto;
+}
