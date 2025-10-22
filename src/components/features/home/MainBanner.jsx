@@ -6,15 +6,15 @@ const MainBanner = () => {
 
   const slides = [
     {
-      image: '/src/assets/images/main_base_banner_01.png',
+      image: '/images/main_base_banner_01.png',
       text: '공간에 최적화된 기술력과 안정적인 품질로\nLED 디스플레이의 새로운 기준을 만듭니다'
     },
     {
-      image: '/src/assets/images/main_base_banner_01.png',
+      image: '/images/main_base_banner_01.png',
       text: '공간에 최적화된 기술력과 안정적인 품질로\nLED 디스플레이의 새로운 기준을 만듭니다'
     },
     {
-      image: '/src/assets/images/main_base_banner_01.png',
+      image: '/images/main_base_banner_01.png',
       text: '공간에 최적화된 기술력과 안정적인 품질로\nLED 디스플레이의 새로운 기준을 만듭니다'
     }
   ]
@@ -71,7 +71,7 @@ const MainBanner = () => {
         onClick={prevSlide}
         aria-label="이전 슬라이드"
       >
-        <img src="/src/assets/images/prev_btn.svg" alt="이전" />
+        <img src="/images/prev_btn.svg" alt="이전" />
       </button>
 
       {/* 다음 버튼 */}
@@ -80,7 +80,7 @@ const MainBanner = () => {
         onClick={nextSlide}
         aria-label="다음 슬라이드"
       >
-        <img src="/src/assets/images/next_btn.svg" alt="다음" />
+        <img src="/images/next_btn.svg" alt="다음" />
       </button>
 
       {/* 인디케이터 */}

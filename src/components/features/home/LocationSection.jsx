@@ -13,7 +13,7 @@ const LocationSection = () => {
         {/* 이미지 */}
         <div className={styles.imageWrapper}>
           <img
-            src="/src/assets/images/main_map_img.png"
+            src="/images/main_map_img.png"
             alt="오시는길"
             className={styles.image}
           />

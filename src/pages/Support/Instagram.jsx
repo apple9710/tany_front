@@ -13,7 +13,7 @@ const Instagram = () => {
   return (
     <div className={styles.page}>
       <SubPageBanner
-        backgroundImage="/src/assets/images/sub_Instagram_banner_img.png"
+        backgroundImage="/images/sub_Instagram_banner_img.png"
         titleEn="SUPPORT"
         titleKo="고객지원"
         subMenuItems={subMenuItems}

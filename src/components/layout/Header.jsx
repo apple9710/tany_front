@@ -25,7 +25,7 @@ const Header = () => {
       <div className={styles.container}>
         {/* 로고 - 왼쪽 */}
         <Link to="/" className={styles.logo} onClick={closeMenu}>
-          <img src="/src/assets/images/logo.png" alt="TANY" className={styles.logoImage} />
+          <img src="/images/logo.png" alt="TANY" className={styles.logoImage} />
         </Link>
 
         {/* 네비게이션 - 가운데 */}

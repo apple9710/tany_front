@@ -14,7 +14,7 @@ const History = () => {
   const historyData = [
     {
       year: '2025',
-      image: '/src/assets/images/history_2025.jpg',
+      image: '/images/history_2025.jpg',
       events: [
         { date: '10.', description: '0000설립' },
         { date: '18.', description: '0000설립' },
@@ -33,7 +33,7 @@ const History = () => {
     },
     {
       year: '2023',
-      image: '/src/assets/images/history_2023.jpg',
+      image: '/images/history_2023.jpg',
       events: [
         { date: '10.', description: '0000설립' },
         { date: '18.', description: '0000설립' },
@@ -46,7 +46,7 @@ const History = () => {
   return (
     <div className={styles.page}>
       <SubPageBanner
-        backgroundImage="/src/assets/images/sub_history_banner_img.png"
+        backgroundImage="/images/sub_history_banner_img.png"
         titleEn="HISTORY"
         titleKo="연혁"
         subMenuItems={subMenuItems}

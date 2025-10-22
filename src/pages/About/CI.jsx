@@ -13,7 +13,7 @@ const CI = () => {
   return (
     <div className={styles.page}>
       <SubPageBanner
-        backgroundImage="/src/assets/images/sub_CI_banner_img.png"
+        backgroundImage="/images/sub_CI_banner_img.png"
         titleEn="CI"
         titleKo="CI"
         subMenuItems={subMenuItems}

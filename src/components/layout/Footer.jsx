@@ -6,7 +6,7 @@ const Footer = () => {
       <div className={styles.container}>
         {/* 로고 */}
         <img
-          src="/src/assets/images/logo_white.svg"
+          src="/images/logo_white.svg"
           alt="TANY"
           className={styles.logo}
         />

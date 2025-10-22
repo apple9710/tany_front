@@ -13,7 +13,7 @@ const Inquiry = () => {
   return (
     <div className={styles.page}>
       <SubPageBanner
-        backgroundImage="/src/assets/images/sub_Inquiry_banner_img.png"
+        backgroundImage="/images/sub_Inquiry_banner_img.png"
         titleEn="SUPPORT"
         titleKo="고객지원"
         subMenuItems={subMenuItems}

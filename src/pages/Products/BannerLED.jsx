@@ -13,7 +13,7 @@ const BannerLED = () => {
   return (
     <div className={styles.page}>
       <SubPageBanner
-        backgroundImage="/src/assets/images/sub_BannerLED_banner_img.png"
+        backgroundImage="/images/sub_BannerLED_banner_img.png"
         titleEn="PRODUCTS"
         titleKo="제품소개"
         subMenuItems={subMenuItems}

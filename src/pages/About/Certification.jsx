@@ -29,7 +29,7 @@ const Certification = () => {
   return (
     <div className={styles.page}>
       <SubPageBanner
-        backgroundImage="/src/assets/images/sub_Certification_banner_img.png"
+        backgroundImage="/images/sub_Certification_banner_img.png"
         titleEn="CERTIFICATION"
         titleKo="기술인증"
         subMenuItems={subMenuItems}

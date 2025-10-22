@@ -15,29 +15,29 @@ const Location = () => {
     {
       name: '전주지사',
       address: '전북 전주시 덕진구 기린대로 281, 1층, 2층',
-      image: '/src/assets/images/main_map_img.png'
+      image: '/images/main_map_img.png'
     },
     {
       name: '대전지사',
       address: '대전광역시 중구 오류동 199-1 킹콩LED',
-      image: '/src/assets/images/main_map_img.png'
+      image: '/images/main_map_img.png'
     },
     {
       name: '서울지사',
       address: '서울특별시 강남구 선릉로 704, 상가동 12층 1235-3호 청담벤처프라자',
-      image: '/src/assets/images/main_map_img.png'
+      image: '/images/main_map_img.png'
     },
     {
       name: '김제공장',
       address: '전북 김제시 월촌공단길 33, 1동, 2동(월촌농공단지)',
-      image: '/src/assets/images/main_map_img.png'
+      image: '/images/main_map_img.png'
     }
   ]
 
   return (
     <div className={styles.page}>
       <SubPageBanner
-        backgroundImage="/src/assets/images/sub_Location_banner_img.png"
+        backgroundImage="/images/sub_Location_banner_img.png"
         titleEn="LOCATION"
         titleKo="오시는 길"
         subMenuItems={subMenuItems}

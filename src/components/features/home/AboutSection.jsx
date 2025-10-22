@@ -13,7 +13,7 @@ const AboutSection = () => {
         {/* 이미지 */}
         <div className={styles.imageWrapper}>
           <img
-            src="/src/assets/images/main_sec02_img.png"
+            src="/images/main_sec02_img.png"
             alt="ABOUT TANY"
             className={styles.image}
           />

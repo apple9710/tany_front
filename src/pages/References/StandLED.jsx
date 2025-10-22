@@ -10,24 +10,24 @@ const StandLED = () => {
   ]
 
   const referenceData = [
-    { title: '(주)타니 1, 2층 실외 LED 전광판', image: '/src/assets/images/demo_refImg.png' },
-    { title: '(주)타니 1, 2층 실외 LED 전광판', image: '/src/assets/images/demo_refImg.png' },
-    { title: '(주)타니 1, 2층 실외 LED 전광판', image: '/src/assets/images/demo_refImg.png' },
-    { title: '(주)타니 1, 2층 실외 LED 전광판', image: '/src/assets/images/demo_refImg.png' },
-    { title: '(주)타니 1, 2층 실외 LED 전광판', image: '/src/assets/images/demo_refImg.png' },
-    { title: '(주)타니 1, 2층 실외 LED 전광판', image: '/src/assets/images/demo_refImg.png' },
-    { title: '(주)타니 1, 2층 실외 LED 전광판', image: '/src/assets/images/demo_refImg.png' },
-    { title: '(주)타니 1, 2층 실외 LED 전광판', image: '/src/assets/images/demo_refImg.png' },
-    { title: '(주)타니 1, 2층 실외 LED 전광판', image: '/src/assets/images/demo_refImg.png' },
-    { title: '(주)타니 1, 2층 실외 LED 전광판', image: '/src/assets/images/demo_refImg.png' },
-    { title: '(주)타니 1, 2층 실외 LED 전광판', image: '/src/assets/images/demo_refImg.png' },
-    { title: '(주)타니 1, 2층 실외 LED 전광판', image: '/src/assets/images/demo_refImg.png' }
+    { title: '(주)타니 1, 2층 실외 LED 전광판', image: '/images/demo_refImg.png' },
+    { title: '(주)타니 1, 2층 실외 LED 전광판', image: '/images/demo_refImg.png' },
+    { title: '(주)타니 1, 2층 실외 LED 전광판', image: '/images/demo_refImg.png' },
+    { title: '(주)타니 1, 2층 실외 LED 전광판', image: '/images/demo_refImg.png' },
+    { title: '(주)타니 1, 2층 실외 LED 전광판', image: '/images/demo_refImg.png' },
+    { title: '(주)타니 1, 2층 실외 LED 전광판', image: '/images/demo_refImg.png' },
+    { title: '(주)타니 1, 2층 실외 LED 전광판', image: '/images/demo_refImg.png' },
+    { title: '(주)타니 1, 2층 실외 LED 전광판', image: '/images/demo_refImg.png' },
+    { title: '(주)타니 1, 2층 실외 LED 전광판', image: '/images/demo_refImg.png' },
+    { title: '(주)타니 1, 2층 실외 LED 전광판', image: '/images/demo_refImg.png' },
+    { title: '(주)타니 1, 2층 실외 LED 전광판', image: '/images/demo_refImg.png' },
+    { title: '(주)타니 1, 2층 실외 LED 전광판', image: '/images/demo_refImg.png' }
   ]
 
   return (
     <div className={styles.page}>
       <SubPageBanner
-        backgroundImage="/src/assets/images/sub_StandLED_banner_img.png"
+        backgroundImage="/images/sub_StandLED_banner_img.png"
         titleEn="REFERENCE"
         titleKo="래퍼런스"
         subMenuItems={subMenuItems}
