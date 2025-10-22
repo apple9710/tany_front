@@ -22,7 +22,7 @@ import './App.css'
 
 function App() {
   return (
-    <Router>
+    <Router basename="/tany_front">
       <div className="App">
         <Header />
 
