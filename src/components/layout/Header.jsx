@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import styles from './Header.module.css'
+import { getPublicUrl } from '../../utils/getPublicUrl'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -25,7 +26,7 @@ const Header = () => {
       <div className={styles.container}>
         {/* 로고 - 왼쪽 */}
         <Link to="/" className={styles.logo} onClick={closeMenu}>
-          <img src="/images/logo.png" alt="TANY" className={styles.logoImage} />
+          <img src={getPublicUrl('/images/logo.png')} alt="TANY" className={styles.logoImage} />
         </Link>
 
         {/* 네비게이션 - 가운데 */}

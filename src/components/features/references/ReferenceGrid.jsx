@@ -1,4 +1,5 @@
 import styles from './ReferenceGrid.module.css'
+import { getPublicUrl } from '../../../utils/getPublicUrl'
 
 const ReferenceGrid = ({ data }) => {
   return (
@@ -6,7 +7,7 @@ const ReferenceGrid = ({ data }) => {
       {data.map((item, index) => (
         <div key={index} className={styles.item}>
           <div className={styles.imageBox}>
-            <img src={item.image} alt={item.title} className={styles.image} />
+            <img src={getPublicUrl(item.image)} alt={item.title} className={styles.image} />
             <div className={styles.textBox}>
               {item.title}
             </div>

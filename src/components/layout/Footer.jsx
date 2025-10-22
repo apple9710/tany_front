@@ -1,4 +1,5 @@
 import styles from './Footer.module.css'
+import { getPublicUrl } from '../../utils/getPublicUrl'
 
 const Footer = () => {
   return (
@@ -6,7 +7,7 @@ const Footer = () => {
       <div className={styles.container}>
         {/* 로고 */}
         <img
-          src="/images/logo_white.svg"
+          src={getPublicUrl('/images/logo_white.svg')}
           alt="TANY"
           className={styles.logo}
         />

@@ -1,4 +1,5 @@
 import styles from './LocationSection.module.css'
+import { getPublicUrl } from '../../../utils/getPublicUrl'
 
 const LocationSection = () => {
   return (
@@ -13,7 +14,7 @@ const LocationSection = () => {
         {/* 이미지 */}
         <div className={styles.imageWrapper}>
           <img
-            src="/images/main_map_img.png"
+            src={getPublicUrl('/images/main_map_img.png')}
             alt="오시는길"
             className={styles.image}
           />

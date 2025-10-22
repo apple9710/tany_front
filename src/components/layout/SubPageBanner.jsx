@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import styles from './SubPageBanner.module.css'
+import { getPublicUrl } from '../../utils/getPublicUrl'
 
 const SubPageBanner = ({
   backgroundImage,
@@ -12,7 +13,7 @@ const SubPageBanner = ({
       {/* 배경 이미지 */}
       <div
         className={styles.background}
-        style={{ backgroundImage: `url(${backgroundImage})` }}
+        style={{ backgroundImage: `url(${getPublicUrl(backgroundImage)})` }}
       >
         <div className={styles.overlay}></div>
       </div>

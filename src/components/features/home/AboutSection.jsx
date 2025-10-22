@@ -1,4 +1,5 @@
 import styles from './AboutSection.module.css'
+import { getPublicUrl } from '../../../utils/getPublicUrl'
 
 const AboutSection = () => {
   return (
@@ -13,7 +14,7 @@ const AboutSection = () => {
         {/* 이미지 */}
         <div className={styles.imageWrapper}>
           <img
-            src="/images/main_sec02_img.png"
+            src={getPublicUrl('/images/main_sec02_img.png')}
             alt="ABOUT TANY"
             className={styles.image}
           />

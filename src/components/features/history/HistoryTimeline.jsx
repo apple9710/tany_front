@@ -1,4 +1,5 @@
 import styles from './HistoryTimeline.module.css'
+import { getPublicUrl } from '../../../utils/getPublicUrl'
 
 const HistoryTimeline = ({ data }) => {
   return (
@@ -27,7 +28,7 @@ const HistoryTimeline = ({ data }) => {
             {/* 우측: 이미지 (있을 경우만) */}
             {yearData.image && (
               <div className={styles.imageArea}>
-                <img src={yearData.image} alt={`${yearData.year} 이미지`} className={styles.image} />
+                <img src={getPublicUrl(yearData.image)} alt={`${yearData.year} 이미지`} className={styles.image} />
               </div>
             )}
           </div>
