@@ -15,6 +15,7 @@
 
 /* 타이틀 */
 .title {
+  font-family: 'Paperozi', sans-serif;
   font-size: 50px;
   font-weight: 400;
   letter-spacing: -0.03em;

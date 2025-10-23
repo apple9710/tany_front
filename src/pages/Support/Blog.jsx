@@ -10,10 +10,15 @@ const Blog = () => {
     { path: '/support/instagram', label: '인스타그램' }
   ]
 
+  const handleBlogClick = () => {
+    // 블로그 URL로 이동 (추후 실제 URL로 변경)
+    window.open('https://blog.naver.com/tany', '_blank', 'noopener,noreferrer')
+  }
+
   return (
     <div className={styles.page}>
       <SubPageBanner
-        backgroundImage="/images/sub_Blog_banner_img.png"
+        backgroundImage="/images/sub_customer_banner_img.png"
         titleEn="SUPPORT"
         titleKo="고객지원"
         subMenuItems={subMenuItems}
@@ -22,6 +27,23 @@ const Blog = () => {
       <main className={styles.content}>
         <div className={styles.container}>
           <PageTitle titleEn="BLOG" titleKo="블로그" />
+
+          <div className={styles.blogContent}>
+            <div className={styles.imageWrapper}>
+              <img
+                src="/images/blog_screenshot.png"
+                alt="블로그 스크린샷"
+                className={styles.screenshot}
+              />
+            </div>
+
+            <button
+              className={styles.linkButton}
+              onClick={handleBlogClick}
+            >
+              바로가기 &gt;
+            </button>
+          </div>
         </div>
       </main>
     </div>

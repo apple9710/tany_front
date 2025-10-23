@@ -12,3 +12,431 @@
   margin: 0 auto;
   padding: 0 var(--container-padding);
 }
+
+/* 제품 소개 섹션 */
+.productIntro {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.productTitleEn {
+  font-family: 'Paperozi', sans-serif;
+  font-size: 38px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.21;
+  color: #1D1D1D;
+  margin: 0 0 12px 0;
+}
+
+.productTitleKo {
+  font-family: var(--font-family);
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.19;
+  color: #707070;
+  margin: 0 0 24px 0;
+}
+
+.divider {
+  width: 375px;
+  max-width: 90%;
+  height: 1px;
+  background-color: #F26966;
+  margin: 0 auto 60px;
+}
+
+.productDescription {
+  font-family: var(--font-family);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.583;
+  color: #707070;
+  text-align: center;
+  margin: 0 0 60px 0;
+}
+
+.productImageWrapper {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 40px;
+}
+
+.productImage {
+  width: 100%;
+  height: auto;
+  border: 0.2px solid #707070;
+  border-radius: 15px;
+  display: block;
+}
+
+.referenceButton {
+  padding: 18px 80px;
+  font-family: var(--font-family);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.19;
+  color: var(--color-primary);
+  background-color: var(--color-white);
+  border: 0.5px solid var(--color-primary);
+  border-radius: 35px;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.referenceButton:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.referenceButton:active {
+  transform: scale(0.98);
+}
+
+/* 특징 섹션 - 박스형 레이아웃 */
+.featuresSection {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+
+.featureBox {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.featureIcon {
+  width: 42px;
+  height: 43px;
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+.featureContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.featureTitle {
+  font-family: 'Paperozi', sans-serif;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 1.21;
+  color: var(--color-primary);
+  margin: 0 0 20px 0;
+}
+
+.featureDescription {
+  font-family: var(--font-family);
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.19;
+  color: #707070;
+  margin: 0;
+}
+
+/* SPEC 섹션 */
+.specSection {
+  margin-top: 120px;
+  text-align: center;
+}
+
+.sectionHeader {
+  display: flex;
+  gap: 40px;
+  align-items: baseline;
+  margin-bottom: 24px;
+}
+
+.sectionTitleEn {
+  font-family: Inter, sans-serif;
+  font-size: 38px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.21;
+  color: #1D1D1D;
+  margin: 0;
+}
+
+.sectionTitleKo {
+  font-family: var(--font-family);
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.19;
+  color: #707070;
+  margin: 0;
+}
+
+.specDivider {
+  width: 100%;
+  height: 1px;
+  background-color: #F26966;
+  margin-bottom: 40px;
+}
+
+.specTable {
+  margin-bottom: 40px;
+}
+
+.tableCategory {
+  font-family: var(--font-family);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.19;
+  color: var(--color-primary);
+  background-color: rgba(242, 105, 102, 0.1);
+  text-align: center;
+  padding: 20px 0;
+  border: none;
+  margin-bottom: 0;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-family);
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.19;
+  color: #7C7C7C;
+}
+
+.table th,
+.table td {
+  padding: 20px 12px;
+  text-align: center;
+  border-top: 0.5px solid #707070;
+  border-bottom: 0.5px solid #707070;
+  border-left: 0.5px solid #707070;
+}
+
+.table th:first-child,
+.table td:first-child {
+  border-left: none;
+}
+
+.table th:last-child,
+.table td:last-child {
+  border-right: none;
+}
+
+.table th {
+  background-color: rgba(242, 105, 102, 0.1);
+  font-weight: 700;
+  color: #F26966;
+  border-top: 2px solid #F26966;
+  border-bottom: 2px solid #F26966;
+}
+
+.rowHeader {
+  font-weight: 700;
+  color: #7C7C7C;
+  text-align: center;
+}
+
+.operationNote {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #F7F7F7;
+  border-radius: 8px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.operationLabel {
+  font-family: var(--font-family);
+  font-size: 22px;
+  font-weight: 700;
+  color: #121212;
+}
+
+.operationValue {
+  font-family: var(--font-family);
+  font-size: 22px;
+  font-weight: 500;
+  color: #7C7C7C;
+}
+
+/* 반응형 - 태블릿 */
+@media (max-width: 1279px) and (min-width: 768px) {
+  .content {
+    padding-top: 90px;
+    padding-bottom: 180px;
+  }
+
+  .productIntro {
+    margin-top: 60px;
+  }
+
+  .productTitleEn {
+    font-size: 32px;
+  }
+
+  .productTitleKo {
+    font-size: 22px;
+  }
+
+  .productDescription {
+    font-size: 20px;
+  }
+
+  .referenceButton {
+    padding: 17px 60px;
+    font-size: 22px;
+  }
+
+  .featuresSection {
+    margin-top: 80px;
+    gap: 50px;
+  }
+
+  .featureTitle {
+    font-size: 40px;
+  }
+
+  .featureDescription {
+    font-size: 24px;
+  }
+
+  .specSection {
+    margin-top: 100px;
+  }
+
+  .sectionTitleEn {
+    font-size: 32px;
+  }
+
+  .sectionTitleKo {
+    font-size: 22px;
+  }
+
+  .table {
+    font-size: 18px;
+  }
+
+  .table th,
+  .table td {
+    padding: 16px 10px;
+  }
+
+  .operationLabel,
+  .operationValue {
+    font-size: 18px;
+  }
+}
+
+/* 반응형 - 모바일 */
+@media (max-width: 767px) {
+  .content {
+    padding-top: 60px;
+    padding-bottom: 100px;
+  }
+
+  .productIntro {
+    margin-top: 40px;
+  }
+
+  .productTitleEn {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+
+  .productTitleKo {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .divider {
+    width: 250px;
+    margin-bottom: 40px;
+  }
+
+  .productDescription {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+  }
+
+  .productImageWrapper {
+    margin-bottom: 30px;
+  }
+
+  .referenceButton {
+    width: 100%;
+    padding: 16px 40px;
+    font-size: 18px;
+  }
+
+  .featuresSection {
+    margin-top: 60px;
+    gap: 40px;
+  }
+
+  .featureTitle {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .featureDescription {
+    font-size: 18px;
+  }
+
+  .specSection {
+    margin-top: 80px;
+  }
+
+  .sectionHeader {
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .sectionTitleEn {
+    font-size: 24px;
+  }
+
+  .sectionTitleKo {
+    font-size: 18px;
+  }
+
+  .specDivider {
+    margin-bottom: 30px;
+  }
+
+  .tableCategory {
+    font-size: 16px;
+    padding: 16px 0;
+  }
+
+  .table {
+    font-size: 12px;
+    display: block;
+    overflow-x: auto;
+  }
+
+  .table th,
+  .table td {
+    padding: 12px 8px;
+    min-width: 100px;
+  }
+
+  .operationNote {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 16px;
+  }
+
+  .operationLabel,
+  .operationValue {
+    font-size: 14px;
+  }
+}

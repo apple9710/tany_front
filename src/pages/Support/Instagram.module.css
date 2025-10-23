@@ -12,3 +12,90 @@
   margin: 0 auto;
   padding: 0 var(--container-padding);
 }
+
+/* 인스타그램 콘텐츠 */
+.instagramContent {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+
+.imageWrapper {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.screenshot {
+  width: 100%;
+  height: auto;
+  border: 0.2px solid #707070;
+  border-radius: 15px;
+  display: block;
+}
+
+/* 바로가기 버튼 */
+.linkButton {
+  padding: 18px 80px;
+  font-family: var(--font-family);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.19;
+  color: var(--color-primary);
+  background-color: var(--color-white);
+  border: 0.5px solid var(--color-primary);
+  border-radius: 35px;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.linkButton:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.linkButton:active {
+  transform: scale(0.98);
+}
+
+/* 반응형 - 태블릿 */
+@media (max-width: 1279px) and (min-width: 768px) {
+  .content {
+    padding-top: 90px;
+    padding-bottom: 180px;
+  }
+
+  .instagramContent {
+    margin-top: 60px;
+    gap: 50px;
+  }
+
+  .imageWrapper {
+    max-width: 1000px;
+  }
+
+  .linkButton {
+    padding: 17px 60px;
+    font-size: 22px;
+  }
+}
+
+/* 반응형 - 모바일 */
+@media (max-width: 767px) {
+  .content {
+    padding-top: 60px;
+    padding-bottom: 100px;
+  }
+
+  .instagramContent {
+    margin-top: 40px;
+    gap: 40px;
+  }
+
+  .linkButton {
+    width: 100%;
+    padding: 16px 40px;
+    font-size: 18px;
+  }
+}

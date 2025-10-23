@@ -12,6 +12,7 @@
 
 /* 주제목 */
 .title {
+  font-family: 'Paperozi', sans-serif;
   font-size: 38px;
   font-weight: 400;
   letter-spacing: -0.02em;
@@ -73,6 +74,7 @@
 
 /* 컨텐츠 타이틀 */
 .contentTitle {
+  font-family: 'Paperozi', sans-serif;
   font-size: 38px;
   font-weight: 400;
   letter-spacing: -0.03em;

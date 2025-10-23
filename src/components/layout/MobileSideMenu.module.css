@@ -1,0 +1,171 @@
+/* 오버레이 */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1998;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.overlayOpen {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 사이드 메뉴 */
+.sideMenu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 80%;
+  max-width: 400px;
+  height: 100vh;
+  background-color: var(--color-white);
+  z-index: 1999;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.sideMenuOpen {
+  transform: translateX(0);
+}
+
+/* 메뉴 헤더 */
+.menuHeader {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #E8E8E8;
+}
+
+.closeButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #707070;
+  transition: color 0.2s ease;
+}
+
+.closeButton:hover {
+  color: var(--color-primary);
+}
+
+/* 메뉴 리스트 */
+.menuList {
+  padding: 20px 0;
+}
+
+.menuItem {
+  border-bottom: 1px solid #F7F7F7;
+}
+
+/* 메인 메뉴 버튼 */
+.menuButton {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  background: none;
+  border: none;
+  font-family: var(--font-family);
+  font-size: 18px;
+  font-weight: 600;
+  color: #121212;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.menuButton:hover {
+  background-color: #F7F7F7;
+}
+
+.menuButtonActive {
+  color: var(--color-primary);
+  background-color: #FFF5F5;
+}
+
+/* 화살표 아이콘 */
+.arrow {
+  transition: transform 0.3s ease;
+  color: #707070;
+}
+
+.arrowOpen {
+  transform: rotate(180deg);
+}
+
+.menuButtonActive .arrow {
+  color: var(--color-primary);
+}
+
+/* 서브 메뉴 */
+.subMenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background-color: #FAFAFA;
+}
+
+.subMenuOpen {
+  max-height: 500px;
+}
+
+.subMenuItem {
+  width: 100%;
+  display: block;
+  padding: 16px 24px 16px 48px;
+  background: none;
+  border: none;
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 400;
+  color: #707070;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.subMenuItem:hover {
+  background-color: #F0F0F0;
+  color: var(--color-primary);
+}
+
+/* PC에서는 숨김 */
+@media (min-width: 1280px) {
+  .overlay,
+  .sideMenu {
+    display: none;
+  }
+}
+
+/* 모바일 최적화 */
+@media (max-width: 767px) {
+  .sideMenu {
+    width: 85%;
+  }
+
+  .menuButton {
+    font-size: 16px;
+    padding: 18px 20px;
+  }
+
+  .subMenuItem {
+    font-size: 14px;
+    padding: 14px 20px 14px 40px;
+  }
+}

@@ -10,10 +10,15 @@ const Instagram = () => {
     { path: '/support/instagram', label: '인스타그램' }
   ]
 
+  const handleInstagramClick = () => {
+    // 인스타그램 URL로 이동 (추후 실제 URL로 변경)
+    window.open('https://www.instagram.com/tany', '_blank', 'noopener,noreferrer')
+  }
+
   return (
     <div className={styles.page}>
       <SubPageBanner
-        backgroundImage="/images/sub_Instagram_banner_img.png"
+        backgroundImage="/images/sub_customer_banner_img.png"
         titleEn="SUPPORT"
         titleKo="고객지원"
         subMenuItems={subMenuItems}
@@ -22,6 +27,23 @@ const Instagram = () => {
       <main className={styles.content}>
         <div className={styles.container}>
           <PageTitle titleEn="INSTAGRAM" titleKo="인스타그램" />
+
+          <div className={styles.instagramContent}>
+            <div className={styles.imageWrapper}>
+              <img
+                src="/images/instagram_screenshot.png"
+                alt="인스타그램 스크린샷"
+                className={styles.screenshot}
+              />
+            </div>
+
+            <button
+              className={styles.linkButton}
+              onClick={handleInstagramClick}
+            >
+              바로가기 &gt;
+            </button>
+          </div>
         </div>
       </main>
     </div>

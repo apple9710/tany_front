@@ -86,10 +86,38 @@
   background-color: var(--color-primary);
 }
 
-/* Responsive - Tablet & Mobile */
-@media (max-width: 1024px) {
+/* 반응형 - 태블릿 이하 (메뉴 숨김) */
+@media (max-width: 1279px) {
+  .container {
+    height: 80px;
+  }
+
+  .logoImage {
+    width: 90px;
+  }
+
   /* 네비게이션 숨김 */
   .nav {
     display: none;
+  }
+}
+
+/* 반응형 - 모바일 */
+@media (max-width: 767px) {
+  .container {
+    height: 60px;
+  }
+
+  .logoImage {
+    width: 75px;
+  }
+
+  .menuButton {
+    padding: 8px;
+  }
+
+  .menuButton span {
+    width: 20px;
+    height: 1.5px;
   }
 }

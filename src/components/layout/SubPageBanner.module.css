@@ -83,8 +83,65 @@
   font-weight: 400;
   color: #FFFFFF;
   text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.subMenuItem:hover {
+  color: #F26966;
 }
 
 .subMenuItem.active {
   color: #F26966;
+}
+
+/* 반응형 - 태블릿 */
+@media (max-width: 1279px) and (min-width: 768px) {
+  .banner {
+    height: 400px;
+    margin-top: 80px;
+  }
+
+  .titleEn,
+  .titleKo {
+    font-size: 32px;
+  }
+
+  .subMenu {
+    height: 80px;
+  }
+
+  .subMenuContainer {
+    gap: 60px;
+  }
+
+  .subMenuItem {
+    font-size: 18px;
+  }
+}
+
+/* 반응형 - 모바일 */
+@media (max-width: 767px) {
+  .banner {
+    height: 300px;
+    margin-top: 60px;
+  }
+
+  .titleEn,
+  .titleKo {
+    font-size: 24px;
+  }
+
+  .subMenu {
+    height: 60px;
+  }
+
+  .subMenuContainer {
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .subMenuItem {
+    font-size: 14px;
+  }
 }

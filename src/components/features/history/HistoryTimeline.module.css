@@ -65,6 +65,7 @@
 
 /* 연도 */
 .year {
+  font-family: 'Paperozi', sans-serif;
   font-size: 38px;
   color: #F26966;
   letter-spacing: -0.02em;
