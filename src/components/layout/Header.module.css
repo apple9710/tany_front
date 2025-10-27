@@ -16,7 +16,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100px;
+  height: min(4.46429vw, 100px);
 }
 
 /* 로고 - 왼쪽 정렬 */
@@ -28,7 +28,7 @@
 }
 
 .logoImage {
-  width: 103px;
+  width: min(4.59821vw, 103px);
   height: auto;
   object-fit: contain;
 }
@@ -39,12 +39,12 @@
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 112px;
+  gap: min(5vw, 112px);
 }
 
 .navItem {
   position: relative;
-  font-size: 22px;
+  font-size: min(0.98214vw, 22px);
   font-weight: 600;
   color: #707070;
   text-decoration: none;
@@ -66,7 +66,7 @@
 .menuButton {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: min(0.26786vw, 6px);
   padding: var(--spacing-sm);
   background: none;
   border: none;
@@ -76,7 +76,7 @@
 
 .menuButton span {
   display: block;
-  width: 24px;
+  width: min(1.07143vw, 24px);
   height: 2px;
   background-color: var(--color-dark-gray-1);
   transition: var(--transition-fast);
@@ -89,11 +89,11 @@
 /* 반응형 - 태블릿 이하 (메뉴 숨김) */
 @media (max-width: 1279px) {
   .container {
-    height: 80px;
+    height: min(3.57143vw, 80px);
   }
 
   .logoImage {
-    width: 90px;
+    width: min(4.01786vw, 90px);
   }
 
   /* 네비게이션 숨김 */
@@ -105,19 +105,19 @@
 /* 반응형 - 모바일 */
 @media (max-width: 767px) {
   .container {
-    height: 60px;
+    height: min(2.67857vw, 60px);
   }
 
   .logoImage {
-    width: 75px;
+    width: min(3.34821vw, 75px);
   }
 
   .menuButton {
-    padding: 8px;
+    padding: min(0.35714vw, 8px);
   }
 
   .menuButton span {
-    width: 20px;
+    width: min(0.89286vw, 20px);
     height: 1.5px;
   }
 }

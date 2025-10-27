@@ -1,9 +1,9 @@
 .banner {
-  height: 480px;
+  height: min(21.42857vw, 480px);
   position: relative;
   display: flex;
   flex-direction: column;
-  margin-top: 100px;
+  margin-top: min(4.46429vw, 100px);
 }
 
 /* 배경 이미지 */
@@ -42,7 +42,7 @@
 }
 
 .titleEn {
-  font-size: 40px;
+  font-size: min(1.78571vw, 40px);
   font-weight: 400;
   color: #FFFFFF;
   margin: 0;
@@ -50,7 +50,7 @@
 }
 
 .titleKo {
-  font-size: 40px;
+  font-size: min(1.78571vw, 40px);
   font-weight: 400;
   color: #FFFFFF;
   margin: 0;
@@ -59,7 +59,7 @@
 
 /* 서브 메뉴 */
 .subMenu {
-  height: 100px;
+  height: min(4.46429vw, 100px);
   background-color: rgba(0, 0, 0, 0.6);
   position: relative;
   z-index: 3;
@@ -73,13 +73,13 @@
   margin: 0 auto;
   padding: 0 var(--container-padding);
   display: flex;
-  gap: 120px;
+  gap: min(5.35714vw, 120px);
   align-items: center;
   justify-content: center;
 }
 
 .subMenuItem {
-  font-size: 22px;
+  font-size: min(0.98214vw, 22px);
   font-weight: 400;
   color: #FFFFFF;
   text-decoration: none;
@@ -98,50 +98,50 @@
 /* 반응형 - 태블릿 */
 @media (max-width: 1279px) and (min-width: 768px) {
   .banner {
-    height: 400px;
-    margin-top: 80px;
+    height: min(17.85714vw, 400px);
+    margin-top: min(3.57143vw, 80px);
   }
 
   .titleEn,
   .titleKo {
-    font-size: 32px;
+    font-size: min(1.42857vw, 32px);
   }
 
   .subMenu {
-    height: 80px;
+    height: min(3.57143vw, 80px);
   }
 
   .subMenuContainer {
-    gap: 60px;
+    gap: min(2.67857vw, 60px);
   }
 
   .subMenuItem {
-    font-size: 18px;
+    font-size: min(0.80357vw, 18px);
   }
 }
 
 /* 반응형 - 모바일 */
 @media (max-width: 767px) {
   .banner {
-    height: 300px;
-    margin-top: 60px;
+    height: min(13.39286vw, 300px);
+    margin-top: min(2.67857vw, 60px);
   }
 
   .titleEn,
   .titleKo {
-    font-size: 24px;
+    font-size: min(1.07143vw, 24px);
   }
 
   .subMenu {
-    height: 60px;
+    height: min(2.67857vw, 60px);
   }
 
   .subMenuContainer {
-    gap: 20px;
-    padding: 0 20px;
+    gap: min(0.89286vw, 20px);
+    padding: 0 min(0.89286vw, 20px);
   }
 
   .subMenuItem {
-    font-size: 14px;
+    font-size: min(0.625vw, 14px);
   }
 }

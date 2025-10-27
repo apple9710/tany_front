@@ -3,8 +3,8 @@
 }
 
 .content {
-  padding-top: 129px;
-  padding-bottom: 260px;
+  padding-top: min(5.75893vw, 129px);
+  padding-bottom: min(11.60714vw, 260px);
 }
 
 .container {
@@ -15,71 +15,71 @@
 
 /* 제품 소개 섹션 */
 .productIntro {
-  margin-top: 80px;
+  margin-top: min(3.57143vw, 80px);
   text-align: center;
 }
 
 .productTitleEn {
   font-family: 'Paperozi', sans-serif;
-  font-size: 38px;
+  font-size: min(1.69643vw, 38px);
   font-weight: 400;
   letter-spacing: -0.02em;
   line-height: 1.21;
   color: #1D1D1D;
-  margin: 0 0 12px 0;
+  margin: 0 0 min(0.53571vw, 12px) 0;
 }
 
 .productTitleKo {
   font-family: var(--font-family);
-  font-size: 26px;
+  font-size: min(1.16071vw, 26px);
   font-weight: 500;
   line-height: 1.19;
   color: #707070;
-  margin: 0 0 24px 0;
+  margin: 0 0 min(1.07143vw, 24px) 0;
 }
 
 .divider {
-  width: 375px;
+  width: min(16.74107vw, 375px);
   max-width: 90%;
   height: 1px;
   background-color: #F26966;
-  margin: 0 auto 60px;
+  margin: 0 auto min(2.67857vw, 60px);
 }
 
 .productDescription {
   font-family: var(--font-family);
-  font-size: 24px;
+  font-size: min(1.07143vw, 24px);
   font-weight: 400;
   line-height: 1.583;
   color: #707070;
   text-align: center;
-  margin: 0 0 60px 0;
+  margin: 0 0 min(2.67857vw, 60px) 0;
 }
 
 .productImageWrapper {
   width: 100%;
-  max-width: 900px;
-  margin: 0 auto 40px;
+  max-width: min(40.17857vw, 900px);
+  margin: 0 auto min(1.78571vw, 40px);
 }
 
 .productImage {
   width: 100%;
   height: auto;
   border: 0.2px solid #707070;
-  border-radius: 15px;
+  border-radius: min(0.66964vw, 15px);
   display: block;
 }
 
 .referenceButton {
-  padding: 18px 80px;
+  padding: min(0.80357vw, 18px) min(3.57143vw, 80px);
   font-family: var(--font-family);
-  font-size: 26px;
+  font-size: min(1.16071vw, 26px);
   font-weight: 700;
   line-height: 1.19;
   color: var(--color-primary);
   background-color: var(--color-white);
   border: 0.5px solid var(--color-primary);
-  border-radius: 35px;
+  border-radius: min(1.5625vw, 35px);
   cursor: pointer;
   transition: all var(--transition-normal);
 }
@@ -95,11 +95,11 @@
 
 /* 특징 섹션 */
 .featuresSection {
-  margin-top: 100px;
+  margin-top: min(4.46429vw, 100px);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 60px;
+  gap: min(2.67857vw, 60px);
 }
 
 .featureItem {
@@ -107,14 +107,14 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 20px;
+  gap: min(0.89286vw, 20px);
 }
 
 .featureIcon {
-  width: 42px;
-  height: 43px;
+  width: min(1.875vw, 42px);
+  height: min(1.91964vw, 43px);
   flex-shrink: 0;
-  margin-top: 5px;
+  margin-top: min(0.22321vw, 5px);
 }
 
 .featureContent {
@@ -126,16 +126,16 @@
 
 .featureTitle {
   font-family: 'Paperozi', sans-serif;
-  font-size: 50px;
+  font-size: min(2.23214vw, 50px);
   font-weight: 400;
   line-height: 1.21;
   color: var(--color-primary);
-  margin: 0 0 20px 0;
+  margin: 0 0 min(0.89286vw, 20px) 0;
 }
 
 .featureDescription {
   font-family: var(--font-family);
-  font-size: 30px;
+  font-size: min(1.33929vw, 30px);
   font-weight: 500;
   line-height: 1.19;
   color: #707070;
@@ -145,20 +145,20 @@
 /* SPEC & OPTION 섹션 */
 .specSection,
 .optionSection {
-  margin-top: 120px;
+  margin-top: min(5.35714vw, 120px);
   text-align: center;
 }
 
 .sectionHeader {
   display: flex;
-  gap: 40px;
+  gap: min(1.78571vw, 40px);
   align-items: baseline;
-  margin-bottom: 24px;
+  margin-bottom: min(1.07143vw, 24px);
 }
 
 .sectionTitleEn {
   font-family: Inter, sans-serif;
-  font-size: 38px;
+  font-size: min(1.69643vw, 38px);
   font-weight: 400;
   letter-spacing: -0.02em;
   line-height: 1.21;
@@ -168,7 +168,7 @@
 
 .sectionTitleKo {
   font-family: var(--font-family);
-  font-size: 26px;
+  font-size: min(1.16071vw, 26px);
   font-weight: 500;
   line-height: 1.19;
   color: #707070;
@@ -179,22 +179,22 @@
   width: 100%;
   height: 1px;
   background-color: #F26966;
-  margin-bottom: 40px;
+  margin-bottom: min(1.78571vw, 40px);
 }
 
 .specTable {
-  margin-bottom: 40px;
+  margin-bottom: min(1.78571vw, 40px);
 }
 
 .tableCategory {
   font-family: var(--font-family);
-  font-size: 22px;
+  font-size: min(0.98214vw, 22px);
   font-weight: 700;
   line-height: 1.19;
   color: var(--color-primary);
   background-color: rgba(242, 105, 102, 0.1);
   text-align: center;
-  padding: 20px 0;
+  padding: min(0.89286vw, 20px) 0;
   border: none;
   margin-bottom: 0;
 }
@@ -204,7 +204,7 @@
   width: 100%;
   border-collapse: collapse;
   font-family: var(--font-family);
-  font-size: 22px;
+  font-size: min(0.98214vw, 22px);
   font-weight: 500;
   line-height: 1.19;
   color: #7C7C7C;
@@ -214,7 +214,7 @@
 .table td,
 .optionTable th,
 .optionTable td {
-  padding: 20px 12px;
+  padding: min(0.89286vw, 20px) min(0.53571vw, 12px);
   text-align: center;
   border-top: 0.5px solid #707070;
   border-bottom: 0.5px solid #707070;
@@ -260,35 +260,35 @@
 .featureCell {
   white-space: pre-line;
   text-align: left;
-  padding-left: 20px;
+  padding-left: min(0.89286vw, 20px);
 }
 
 .tableDivider {
   height: 2px;
   background-color: #F26966;
-  margin: 40px 0;
+  margin: min(1.78571vw, 40px) 0;
 }
 
 .operationNote {
-  margin-top: 40px;
-  padding: 20px;
+  margin-top: min(1.78571vw, 40px);
+  padding: min(0.89286vw, 20px);
   background-color: #F7F7F7;
-  border-radius: 8px;
+  border-radius: min(0.35714vw, 8px);
   display: flex;
-  gap: 20px;
+  gap: min(0.89286vw, 20px);
   align-items: center;
 }
 
 .operationLabel {
   font-family: var(--font-family);
-  font-size: 22px;
+  font-size: min(0.98214vw, 22px);
   font-weight: 700;
   color: #121212;
 }
 
 .operationValue {
   font-family: var(--font-family);
-  font-size: 22px;
+  font-size: min(0.98214vw, 22px);
   font-weight: 500;
   color: #7C7C7C;
 }
@@ -296,162 +296,162 @@
 /* 반응형 - 태블릿 */
 @media (max-width: 1279px) and (min-width: 768px) {
   .content {
-    padding-top: 90px;
-    padding-bottom: 180px;
+    padding-top: min(4.01786vw, 90px);
+    padding-bottom: min(8.03571vw, 180px);
   }
 
   .productIntro {
-    margin-top: 60px;
+    margin-top: min(2.67857vw, 60px);
   }
 
   .productTitleEn {
-    font-size: 32px;
+    font-size: min(1.42857vw, 32px);
   }
 
   .productTitleKo {
-    font-size: 22px;
+    font-size: min(0.98214vw, 22px);
   }
 
   .productDescription {
-    font-size: 20px;
+    font-size: min(0.89286vw, 20px);
   }
 
   .referenceButton {
-    padding: 17px 60px;
-    font-size: 22px;
+    padding: min(0.75893vw, 17px) min(2.67857vw, 60px);
+    font-size: min(0.98214vw, 22px);
   }
 
   .featuresSection {
-    margin-top: 80px;
-    gap: 50px;
+    margin-top: min(3.57143vw, 80px);
+    gap: min(2.23214vw, 50px);
   }
 
   .featureTitle {
-    font-size: 40px;
+    font-size: min(1.78571vw, 40px);
   }
 
   .featureDescription {
-    font-size: 24px;
+    font-size: min(1.07143vw, 24px);
   }
 
   .specSection,
   .optionSection {
-    margin-top: 100px;
+    margin-top: min(4.46429vw, 100px);
   }
 
   .sectionTitleEn {
-    font-size: 32px;
+    font-size: min(1.42857vw, 32px);
   }
 
   .sectionTitleKo {
-    font-size: 22px;
+    font-size: min(0.98214vw, 22px);
   }
 
   .table,
   .optionTable {
-    font-size: 18px;
+    font-size: min(0.80357vw, 18px);
   }
 
   .table th,
   .table td,
   .optionTable th,
   .optionTable td {
-    padding: 16px 10px;
+    padding: min(0.71429vw, 16px) min(0.44643vw, 10px);
   }
 
   .operationLabel,
   .operationValue {
-    font-size: 18px;
+    font-size: min(0.80357vw, 18px);
   }
 }
 
 /* 반응형 - 모바일 */
 @media (max-width: 767px) {
   .content {
-    padding-top: 60px;
-    padding-bottom: 100px;
+    padding-top: min(2.67857vw, 60px);
+    padding-bottom: min(4.46429vw, 100px);
   }
 
   .productIntro {
-    margin-top: 40px;
+    margin-top: min(1.78571vw, 40px);
   }
 
   .productTitleEn {
-    font-size: 24px;
-    margin-bottom: 8px;
+    font-size: min(1.07143vw, 24px);
+    margin-bottom: min(0.35714vw, 8px);
   }
 
   .productTitleKo {
-    font-size: 18px;
-    margin-bottom: 20px;
+    font-size: min(0.80357vw, 18px);
+    margin-bottom: min(0.89286vw, 20px);
   }
 
   .divider {
-    width: 250px;
-    margin-bottom: 40px;
+    width: min(11.16071vw, 250px);
+    margin-bottom: min(1.78571vw, 40px);
   }
 
   .productDescription {
-    font-size: 16px;
+    font-size: min(0.71429vw, 16px);
     line-height: 1.6;
-    margin-bottom: 40px;
+    margin-bottom: min(1.78571vw, 40px);
   }
 
   .productImageWrapper {
-    margin-bottom: 30px;
+    margin-bottom: min(1.33929vw, 30px);
   }
 
   .referenceButton {
     width: 100%;
-    padding: 16px 40px;
-    font-size: 18px;
+    padding: min(0.71429vw, 16px) min(1.78571vw, 40px);
+    font-size: min(0.80357vw, 18px);
   }
 
   .featuresSection {
-    margin-top: 60px;
-    gap: 40px;
+    margin-top: min(2.67857vw, 60px);
+    gap: min(1.78571vw, 40px);
   }
 
   .featureTitle {
-    font-size: 28px;
-    margin-bottom: 12px;
+    font-size: min(1.25vw, 28px);
+    margin-bottom: min(0.53571vw, 12px);
   }
 
   .featureDescription {
-    font-size: 18px;
+    font-size: min(0.80357vw, 18px);
   }
 
   .specSection,
   .optionSection {
-    margin-top: 80px;
+    margin-top: min(3.57143vw, 80px);
   }
 
   .sectionHeader {
     flex-direction: column;
-    gap: 8px;
-    margin-bottom: 20px;
+    gap: min(0.35714vw, 8px);
+    margin-bottom: min(0.89286vw, 20px);
   }
 
   .sectionTitleEn {
-    font-size: 24px;
+    font-size: min(1.07143vw, 24px);
   }
 
   .sectionTitleKo {
-    font-size: 18px;
+    font-size: min(0.80357vw, 18px);
   }
 
   .specDivider {
-    margin-bottom: 30px;
+    margin-bottom: min(1.33929vw, 30px);
   }
 
   .tableCategory {
-    font-size: 16px;
-    padding: 16px 0;
+    font-size: min(0.71429vw, 16px);
+    padding: min(0.71429vw, 16px) 0;
   }
 
   .table,
   .optionTable {
-    font-size: 12px;
+    font-size: min(0.53571vw, 12px);
     display: block;
     overflow-x: auto;
   }
@@ -460,23 +460,23 @@
   .table td,
   .optionTable th,
   .optionTable td {
-    padding: 12px 8px;
-    min-width: 100px;
+    padding: min(0.53571vw, 12px) min(0.35714vw, 8px);
+    min-width: min(4.46429vw, 100px);
   }
 
   .featureCell {
-    min-width: 200px;
+    min-width: min(8.92857vw, 200px);
   }
 
   .operationNote {
     flex-direction: column;
-    gap: 12px;
+    gap: min(0.53571vw, 12px);
     align-items: flex-start;
-    padding: 16px;
+    padding: min(0.71429vw, 16px);
   }
 
   .operationLabel,
   .operationValue {
-    font-size: 14px;
+    font-size: min(0.625vw, 14px);
   }
 }

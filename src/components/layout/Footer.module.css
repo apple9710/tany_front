@@ -1,7 +1,7 @@
 .footer {
   background-color: #1C1C1C;
   color: var(--color-white);
-  padding: 82px 0 66px;
+  padding: min(3.66071vw, 82px) 0 min(2.94643vw, 66px);
 }
 
 .container {
@@ -13,23 +13,23 @@
 
 /* 로고 */
 .logo {
-  width: 103px;
+  width: min(4.59821vw, 103px);
   height: auto;
-  margin-bottom: 36.24px;
+  margin-bottom: min(1.61786vw, 36.24px);
 }
 
 /* 회사 정보 */
 .info {
-  margin-bottom: 53px;
+  margin-bottom: min(2.36607vw, 53px);
 }
 
 .infoRow {
   display: flex;
   flex-wrap: wrap;
-  gap: 28px;
-  font-size: 14px;
+  gap: min(1.25vw, 28px);
+  font-size: min(0.625vw, 14px);
   line-height: 1.6;
-  margin-bottom: 12px;
+  margin-bottom: min(0.53571vw, 12px);
 }
 
 .infoRow:last-child {
@@ -38,7 +38,7 @@
 
 .infoItem {
   display: inline-flex;
-  gap: 8px;
+  gap: min(0.35714vw, 8px);
 }
 
 .label {
@@ -51,7 +51,7 @@
 
 /* 카피라이트 */
 .copyright {
-  font-size: 14px;
+  font-size: min(0.625vw, 14px);
   color: #FFFFFF;
   margin: 0;
 }
@@ -59,54 +59,54 @@
 /* 반응형 - 태블릿 */
 @media (max-width: 1279px) and (min-width: 768px) {
   .footer {
-    padding: 70px 0 55px;
+    padding: min(3.125vw, 70px) 0 min(2.45536vw, 55px);
   }
 
   .logo {
-    margin-bottom: 30px;
+    margin-bottom: min(1.33929vw, 30px);
   }
 
   .info {
-    margin-bottom: 45px;
+    margin-bottom: min(2.00893vw, 45px);
   }
 
   .infoRow {
-    gap: 20px;
-    font-size: 13px;
+    gap: min(0.89286vw, 20px);
+    font-size: min(0.58036vw, 13px);
   }
 
   .copyright {
-    font-size: 13px;
+    font-size: min(0.58036vw, 13px);
   }
 }
 
 /* 반응형 - 모바일 */
 @media (max-width: 767px) {
   .footer {
-    padding: 60px 0 50px;
+    padding: min(2.67857vw, 60px) 0 min(2.23214vw, 50px);
   }
 
   .logo {
-    width: 80px;
-    margin-bottom: 24px;
+    width: min(3.57143vw, 80px);
+    margin-bottom: min(1.07143vw, 24px);
   }
 
   .info {
-    margin-bottom: 40px;
+    margin-bottom: min(1.78571vw, 40px);
   }
 
   .infoRow {
     flex-direction: column;
-    gap: 12px;
-    font-size: 12px;
+    gap: min(0.53571vw, 12px);
+    font-size: min(0.53571vw, 12px);
   }
 
   .infoItem {
     flex-direction: column;
-    gap: 4px;
+    gap: min(0.17857vw, 4px);
   }
 
   .copyright {
-    font-size: 12px;
+    font-size: min(0.53571vw, 12px);
   }
 }

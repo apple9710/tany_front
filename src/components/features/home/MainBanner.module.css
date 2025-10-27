@@ -43,7 +43,7 @@
 }
 
 .slideText {
-  font-size: 38px;
+  font-size: min(1.69643vw, 38px);
   font-weight: 400;
   color: #FFFFFF;
   letter-spacing: -0.03em;
@@ -76,28 +76,28 @@
 
 /* 이전 버튼 - 중앙에서 왼쪽으로 720px */
 .prevButton {
-  left: calc(50% - 720px);
+  left: calc(50% - min(32.14286vw, 720px));
 }
 
 /* 다음 버튼 - 중앙에서 오른쪽으로 720px */
 .nextButton {
-  right: calc(50% - 720px);
+  right: calc(50% - min(32.14286vw, 720px));
 }
 
 /* 인디케이터 */
 .indicators {
   position: absolute;
-  bottom: 40px;
+  bottom: min(1.78571vw, 40px);
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 12px;
+  gap: min(0.53571vw, 12px);
   z-index: 10;
 }
 
 .indicator {
-  width: 12px;
-  height: 12px;
+  width: min(0.53571vw, 12px);
+  height: min(0.53571vw, 12px);
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.5);
   border: none;
@@ -112,23 +112,23 @@
 
 .indicator.activeIndicator {
   background-color: #FFFFFF;
-  width: 32px;
-  border-radius: 6px;
+  width: min(1.42857vw, 32px);
+  border-radius: min(0.26786vw, 6px);
 }
 
 /* Responsive */
 @media (max-width: 1024px) {
   .prevButton {
-    left: 20px;
+    left: min(0.89286vw, 20px);
   }
 
   .nextButton {
-    right: 20px;
+    right: min(0.89286vw, 20px);
   }
 
   .slideText {
-    font-size: 36px;
-    padding: 0 20px;
+    font-size: min(1.60714vw, 36px);
+    padding: 0 min(0.89286vw, 20px);
   }
 }
 
@@ -138,10 +138,10 @@
   }
 
   .slideText {
-    font-size: 24px;
+    font-size: min(1.07143vw, 24px);
   }
 
   .navButton img {
-    width: 40px;
+    width: min(1.78571vw, 40px);
   }
 }

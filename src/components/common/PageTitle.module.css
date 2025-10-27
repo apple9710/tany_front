@@ -5,26 +5,26 @@
 /* 주제목 (영어) */
 .titleEn {
   font-family: 'Paperozi', sans-serif;
-  font-size: 38px;
+  font-size: min(1.69643vw, 38px);
   font-weight: 400;
   letter-spacing: -0.02em;
   color: #101010;
-  margin-bottom: 13px;
+  margin-bottom: min(0.58036vw, 13px);
   margin-top: 0;
 }
 
 /* 부제목 (한글) */
 .titleKo {
-  font-size: 28px;
+  font-size: min(1.25vw, 28px);
   color: #707070;
   font-weight: 500;
-  margin-bottom: 56px;
+  margin-bottom: min(2.5vw, 56px);
   margin-top: 0;
 }
 
 /* 구분선 */
 .divider {
-  width: 375px;
+  width: min(16.74107vw, 375px);
   max-width: 90%;
   height: 1px;
   background-color: #F26966;
@@ -34,33 +34,33 @@
 /* 반응형 - 태블릿 */
 @media (max-width: 1279px) and (min-width: 768px) {
   .titleEn {
-    font-size: 32px;
-    margin-bottom: 10px;
+    font-size: min(1.42857vw, 32px);
+    margin-bottom: min(0.44643vw, 10px);
   }
 
   .titleKo {
-    font-size: 24px;
-    margin-bottom: 48px;
+    font-size: min(1.07143vw, 24px);
+    margin-bottom: min(2.14286vw, 48px);
   }
 
   .divider {
-    width: 320px;
+    width: min(14.28571vw, 320px);
   }
 }
 
 /* 반응형 - 모바일 */
 @media (max-width: 767px) {
   .titleEn {
-    font-size: 24px;
-    margin-bottom: 8px;
+    font-size: min(1.07143vw, 24px);
+    margin-bottom: min(0.35714vw, 8px);
   }
 
   .titleKo {
-    font-size: 18px;
-    margin-bottom: 36px;
+    font-size: min(0.80357vw, 18px);
+    margin-bottom: min(1.60714vw, 36px);
   }
 
   .divider {
-    width: 250px;
+    width: min(11.16071vw, 250px);
   }
 }

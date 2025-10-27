@@ -2,9 +2,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  row-gap: 40px;
-  margin-top: 60px;
-  max-width: 1400px;
+  row-gap: min(1.78571vw, 40px);
+  margin-top: min(2.67857vw, 60px);
+  max-width: min(62.5vw, 1400px);
   margin-left: auto;
   margin-right: auto;
 }
@@ -17,9 +17,9 @@
 }
 
 .imageBox {
-  width: 449px;
-  height: 449px;
-  border-radius: 15px;
+  width: min(20.04464vw, 449px);
+  height: min(20.04464vw, 449px);
+  border-radius: min(0.66964vw, 15px);
   overflow: hidden;
   position: relative;
 }
@@ -32,15 +32,15 @@
 
 .textBox {
   position: absolute;
-  bottom: 31px;
+  bottom: min(1.38393vw, 31px);
   left: 50%;
   transform: translateX(-50%);
-  width: 358px;
-  height: 60px;
+  width: min(15.98214vw, 358px);
+  height: min(2.67857vw, 60px);
   border-radius: 9999px;
   background-color: rgba(0, 0, 0, 0.5);
   color: #FFFFFF;
-  font-size: 19px;
+  font-size: min(0.84821vw, 19px);
   font-weight: 900;
   display: flex;
   align-items: center;

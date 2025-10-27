@@ -1,9 +1,9 @@
 .list {
-  margin-top: 60px;
+  margin-top: min(2.67857vw, 60px);
 }
 
 .item {
-  margin-bottom: 129px;
+  margin-bottom: min(5.75893vw, 129px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,43 +15,43 @@
 }
 
 .title {
-  font-size: 38px;
+  font-size: min(1.69643vw, 38px);
   letter-spacing: -0.02em;
   color: #1D1D1D;
   font-weight: 400;
   margin: 0;
-  margin-bottom: 13px;
+  margin-bottom: min(0.58036vw, 13px);
 }
 
 .address {
-  font-size: 26px;
+  font-size: min(1.16071vw, 26px);
   font-weight: 500;
   color: #707070;
   margin: 0;
-  margin-bottom: 56px;
+  margin-bottom: min(2.5vw, 56px);
 }
 
 .imageWrapper {
-  max-width: 1400px;
+  max-width: min(62.5vw, 1400px);
   width: 100%;
-  margin-bottom: 60px;
+  margin-bottom: min(2.67857vw, 60px);
 }
 
 .image {
   width: 100%;
   height: auto;
-  border-radius: 15px;
+  border-radius: min(0.66964vw, 15px);
   display: block;
 }
 
 .button {
-  width: 300px;
-  height: 70px;
+  width: min(13.39286vw, 300px);
+  height: min(3.125vw, 70px);
   border: 0.5px solid #F26966;
   border-radius: 9999px;
   background-color: #FFFFFF;
   color: #F26966;
-  font-size: 26px;
+  font-size: min(1.16071vw, 26px);
   font-weight: 700;
   display: flex;
   align-items: center;

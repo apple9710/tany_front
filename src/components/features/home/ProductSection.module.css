@@ -1,6 +1,6 @@
 .section {
-  padding-top: 132px;
-  padding-bottom: 104px;
+  padding-top: min(5.89286vw, 132px);
+  padding-bottom: min(4.64286vw, 104px);
 }
 
 .container {
@@ -13,21 +13,21 @@
 /* 주제목 */
 .title {
   font-family: 'Paperozi', sans-serif;
-  font-size: 38px;
+  font-size: min(1.69643vw, 38px);
   font-weight: 400;
   letter-spacing: -0.02em;
   color: #1D1D1D;
-  margin-bottom: 13px;
+  margin-bottom: min(0.58036vw, 13px);
   margin-top: 0;
 }
 
 /* 부제목 */
 .subtitle {
-  font-size: 26px;
+  font-size: min(1.16071vw, 26px);
   font-weight: 500;
   letter-spacing: 0;
   color: #707070;
-  margin-bottom: 61px;
+  margin-bottom: min(2.72321vw, 61px);
   margin-top: 0;
 }
 
@@ -36,18 +36,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 38px;
-  margin-bottom: 60px;
+  gap: min(1.69643vw, 38px);
+  margin-bottom: min(2.67857vw, 60px);
 }
 
 .tabButton {
-  width: 159px;
-  height: 49px;
+  width: min(7.09821vw, 159px);
+  height: min(2.1875vw, 49px);
   border: 0.5px solid #F26966;
   border-radius: 9999px;
   background-color: #FFFFFF;
   color: #F26966;
-  font-size: 20px;
+  font-size: min(0.89286vw, 20px);
   font-weight: 500;
   cursor: pointer;
 }
@@ -59,11 +59,11 @@
 
 /* 탭 컨텐츠 */
 .tabContent {
-  padding: 60px 62px;
+  padding: min(2.67857vw, 60px) min(2.76786vw, 62px);
   border: 0.5px solid #484848;
-  border-radius: 15px;
+  border-radius: min(0.66964vw, 15px);
   display: flex;
-  gap: 40px;
+  gap: min(1.78571vw, 40px);
   align-items: center;
 }
 
@@ -75,10 +75,10 @@
 /* 컨텐츠 타이틀 */
 .contentTitle {
   font-family: 'Paperozi', sans-serif;
-  font-size: 38px;
+  font-size: min(1.69643vw, 38px);
   font-weight: 400;
   letter-spacing: -0.03em;
-  margin-bottom: 40px;
+  margin-bottom: min(1.78571vw, 40px);
   margin-top: 0;
 }
 
@@ -87,28 +87,28 @@
   width: 100%;
   height: 1px;
   background-color: #F26966;
-  margin-bottom: 36.5px;
+  margin-bottom: min(1.62946vw, 36.5px);
 }
 
 /* 설명 텍스트 */
 .description {
   color: #707070;
-  font-size: 22px;
-  line-height: 38px;
-  margin-bottom: 35px;
+  font-size: min(0.98214vw, 22px);
+  line-height: min(1.69643vw, 38px);
+  margin-bottom: min(1.5625vw, 35px);
   margin-top: 0;
   white-space: pre-line;
 }
 
 /* 버튼 */
 .button {
-  width: 300px;
-  height: 70px;
+  width: min(13.39286vw, 300px);
+  height: min(3.125vw, 70px);
   border: 0.5px solid #F26966;
   border-radius: 9999px;
   background-color: #FFFFFF;
   color: #F26966;
-  font-size: 26px;
+  font-size: min(1.16071vw, 26px);
   font-weight: 700;
   display: flex;
   align-items: center;
@@ -125,9 +125,9 @@
 
 /* 이미지 영역 */
 .imageArea {
-  max-width: 788px;
+  max-width: min(35.17857vw, 788px);
   width: 100%;
   aspect-ratio: 16 / 9;
-  border-radius: 15px;
+  border-radius: min(0.66964vw, 15px);
   border: 1px solid #707070;
 }

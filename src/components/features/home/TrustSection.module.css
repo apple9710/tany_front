@@ -1,5 +1,5 @@
 .section {
-  height: 1000px;
+  height: min(44.64286vw, 1000px);
   background-image: url('/images/main_sec04_img.png');
   background-size: cover;
   background-position: center;
@@ -16,19 +16,19 @@
 /* 타이틀 */
 .title {
   font-family: 'Paperozi', sans-serif;
-  font-size: 50px;
+  font-size: min(2.23214vw, 50px);
   font-weight: 400;
   letter-spacing: -0.03em;
-  line-height: 70px;
-  margin-bottom: 92px;
+  line-height: min(3.125vw, 70px);
+  margin-bottom: min(4.10714vw, 92px);
   color: #FFFFFF;
   margin-top: 0;
 }
 
 /* 설명 */
 .description {
-  font-size: 26px;
-  line-height: 34px;
+  font-size: min(1.16071vw, 26px);
+  line-height: min(1.51786vw, 34px);
   letter-spacing: -0.03em;
   font-weight: 400;
   color: #FFFFFF;

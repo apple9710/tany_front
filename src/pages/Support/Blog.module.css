@@ -3,8 +3,8 @@
 }
 
 .content {
-  padding-top: 129px;
-  padding-bottom: 260px;
+  padding-top: min(5.75893vw, 129px);
+  padding-bottom: min(11.60714vw, 260px);
 }
 
 .container {

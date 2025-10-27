@@ -2,7 +2,7 @@
   background-color: var(--color-white);
   border-bottom: 2px solid var(--color-primary);
   position: sticky;
-  top: 80px; /* Header height */
+  top: min(3.57143vw, 80px); /* Header height */
   z-index: 100;
 }
 
@@ -20,7 +20,7 @@
 }
 
 .list::-webkit-scrollbar {
-  height: 4px;
+  height: min(0.17857vw, 4px);
 }
 
 .list::-webkit-scrollbar-thumb {
@@ -35,7 +35,7 @@
   font-weight: var(--font-weight-medium);
   color: var(--color-gray-1);
   text-decoration: none;
-  border-bottom: 3px solid transparent;
+  border-bottom: min(0.13393vw, 3px) solid transparent;
   transition: var(--transition-fast);
   white-space: nowrap;
 }
@@ -53,7 +53,7 @@
 /* Responsive */
 @media (max-width: 768px) {
   .subMenu {
-    top: 60px; /* Mobile header height */
+    top: min(2.67857vw, 60px); /* Mobile header height */
   }
 
   .list {

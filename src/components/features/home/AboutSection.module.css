@@ -1,6 +1,6 @@
 .section {
-  padding-top: 129px;
-  padding-bottom: 104px;
+  padding-top: min(5.75893vw, 129px);
+  padding-bottom: min(4.64286vw, 104px);
   background-color: #F7F7F7;
 }
 
@@ -14,46 +14,46 @@
 /* 주제목 */
 .title {
   font-family: 'Paperozi', sans-serif;
-  font-size: 38px;
+  font-size: min(1.69643vw, 38px);
   font-weight: 400;
   letter-spacing: -0.02em;
   color: #1D1D1D;
-  margin-bottom: 13px;
+  margin-bottom: min(0.58036vw, 13px);
   margin-top: 0;
 }
 
 /* 부제목 */
 .subtitle {
-  font-size: 26px;
+  font-size: min(1.16071vw, 26px);
   font-weight: 500;
   letter-spacing: 0;
   color: #707070;
-  margin-bottom: 61px;
+  margin-bottom: min(2.72321vw, 61px);
   margin-top: 0;
 }
 
 /* 이미지 */
 .imageWrapper {
-  max-width: 1400px;
-  margin: 0 auto 60px;
+  max-width: min(62.5vw, 1400px);
+  margin: 0 auto min(2.67857vw, 60px);
 }
 
 .image {
   width: 100%;
   height: auto;
-  border-radius: 15px;
+  border-radius: min(0.66964vw, 15px);
   display: block;
 }
 
 /* 버튼 */
 .button {
-  width: 300px;
-  height: 70px;
+  width: min(13.39286vw, 300px);
+  height: min(3.125vw, 70px);
   border: 0.5px solid #F26966;
   border-radius: 9999px;
   background-color: #FFFFFF;
   color: #F26966;
-  font-size: 26px;
+  font-size: min(1.16071vw, 26px);
   font-weight: 700;
   display: flex;
   align-items: center;
