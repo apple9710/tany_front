@@ -91,17 +91,42 @@ const IndoorLED = () => {
             </button>
           </section>
 
+          {/* 제품 이미지 섹션 */}
+          <section className={styles.productImagesSection}>
+            <div className={styles.imageLeft}>
+              <img
+                src="/images/product_led_img_01.png"
+                alt="LED 제품 이미지 1"
+                className={styles.productGalleryImage}
+              />
+            </div>
+            <div className={styles.imageRight}>
+              <img
+                src="/images/product_led_img_02.png"
+                alt="LED 제품 이미지 2"
+                className={styles.productGalleryImage}
+              />
+              <img
+                src="/images/product_led_img_03.png"
+                alt="LED 제품 이미지 3"
+                className={styles.productGalleryImage}
+              />
+            </div>
+          </section>
+
           {/* 특징 섹션 */}
           <section className={styles.featuresSection}>
             {features.map((feature, index) => (
               <div key={index} className={styles.featureItem}>
-                <img
-                  src="/images/check_point.svg"
-                  alt="체크포인트"
-                  className={styles.featureIcon}
-                />
                 <div className={styles.featureContent}>
-                  <h4 className={styles.featureTitle}>{feature.title}</h4>
+                  <div className={styles.featureTitleWrapper}>
+                    <img
+                      src="/images/check_point.svg"
+                      alt="체크포인트"
+                      className={styles.featureIcon}
+                    />
+                    <h4 className={styles.featureTitle}>{feature.title}</h4>
+                  </div>
                   <p className={styles.featureDescription}>{feature.description}</p>
                 </div>
               </div>

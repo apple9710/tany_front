@@ -6,32 +6,27 @@ const HistoryTimeline = ({ data }) => {
     <div className={styles.timeline}>
       {data.map((yearData, index) => (
         <div key={index} className={styles.yearSection}>
-          {/* 연도와 점 */}
+          {/* 좌측: 연도 */}
           <div className={styles.yearHeader}>
             <h3 className={styles.year}>{yearData.year}</h3>
-            <div className={styles.dotActive}></div>
           </div>
 
-          {/* 내용 영역 */}
-          <div className={styles.contentWrapper}>
-            {/* 좌측: 이벤트 리스트 */}
-            <div className={styles.eventList}>
-              {yearData.events.map((event, eventIndex) => (
-                <div key={eventIndex} className={styles.eventItem}>
-                  <div className={styles.dotGray}></div>
-                  <span className={styles.date}>{event.date}</span>
-                  <span className={styles.description}>{event.description}</span>
-                </div>
-              ))}
-            </div>
-
-            {/* 우측: 이미지 (있을 경우만) */}
-            {yearData.image && (
-              <div className={styles.imageArea}>
-                <img src={getPublicUrl(yearData.image)} alt={`${yearData.year} 이미지`} className={styles.image} />
+          {/* 중앙: 이벤트 리스트 */}
+          <div className={styles.eventList}>
+            {yearData.events.map((event, eventIndex) => (
+              <div key={eventIndex} className={styles.eventItem}>
+                <span className={styles.date}>{event.date}</span>
+                <span className={styles.description}>{event.description}</span>
               </div>
-            )}
+            ))}
           </div>
+
+          {/* 우측: 이미지 (있을 경우만) */}
+          {yearData.image && (
+            <div className={styles.imageArea}>
+              <img src={getPublicUrl(yearData.image)} alt={`${yearData.year} 이미지`} className={styles.image} />
+            </div>
+          )}
         </div>
       ))}
     </div>

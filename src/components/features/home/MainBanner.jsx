@@ -55,7 +55,10 @@ const MainBanner = () => {
             <div className={styles.slideContent}>
               <p className={styles.slideText}>
                 {slide.text.split('\n').map((line, i) => (
-                  <span key={i}>
+                  <span
+                    key={i}
+                    className={i === 0 ? styles.firstLine : styles.secondLine}
+                  >
                     {line}
                     {i < slide.text.split('\n').length - 1 && <br />}
                   </span>

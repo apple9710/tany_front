@@ -4,12 +4,10 @@
 
 /* 주제목 (영어) */
 .titleEn {
-  font-family: 'Paperozi', sans-serif;
-  font-size: min(1.69643vw, 38px);
-  font-weight: 400;
-  letter-spacing: -0.02em;
-  color: #101010;
-  margin-bottom: min(0.58036vw, 13px);
+  font: normal normal 800 min(1.69643vw, 38px)/min(2.00893vw, 45px) 'Paperozi', sans-serif;
+  letter-spacing: min(-0.03393vw, -0.76px);
+  color: #1D1D1D;
+  margin-bottom: min(0.53571vw, 12px);
   margin-top: 0;
 }
 

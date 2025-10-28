@@ -1,6 +1,7 @@
 import SubPageBanner from '../../components/layout/SubPageBanner'
 import PageTitle from '../../components/common/PageTitle'
 import ReferenceGrid from '../../components/features/references/ReferenceGrid'
+import Pagination from '../../components/common/Pagination'
 import styles from './StandLED.module.css'
 
 const StandLED = () => {
@@ -37,6 +38,7 @@ const StandLED = () => {
         <div className={styles.container}>
           <PageTitle titleEn="STAND DISPLAY SERIES REFERENCE" titleKo="스탠드 전광판 설치사례" />
           <ReferenceGrid data={referenceData} />
+          <Pagination totalItems={referenceData.length} itemsPerPage={10} />
         </div>
       </main>
     </div>

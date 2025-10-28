@@ -15,22 +15,27 @@
 
 /* 타이틀 */
 .title {
-  font-family: 'Paperozi', sans-serif;
-  font-size: min(2.23214vw, 50px);
-  font-weight: 400;
-  letter-spacing: -0.03em;
-  line-height: min(3.125vw, 70px);
-  margin-bottom: min(4.10714vw, 92px);
+  margin-bottom: min(4.46429vw, 100px);
   color: #FFFFFF;
   margin-top: 0;
 }
 
+.firstLine {
+  display: block;
+  font: normal normal normal min(2.23214vw, 50px)/min(3.125vw, 70px) 'Paperozi', sans-serif;
+  letter-spacing: min(-0.06696vw, -1.5px);
+}
+
+.secondLine {
+  display: block;
+  font: normal normal bold min(2.23214vw, 50px)/min(3.125vw, 70px) 'Paperozi', sans-serif;
+  letter-spacing: min(-0.06696vw, -1.5px);
+}
+
 /* 설명 */
 .description {
-  font-size: min(1.16071vw, 26px);
-  line-height: min(1.51786vw, 34px);
-  letter-spacing: -0.03em;
-  font-weight: 400;
+  font: normal normal normal min(1.16071vw, 26px)/min(1.51786vw, 34px) 'Pretendard', sans-serif;
+  letter-spacing: min(-0.03482vw, -0.78px);
   color: #FFFFFF;
   margin: 0;
 }

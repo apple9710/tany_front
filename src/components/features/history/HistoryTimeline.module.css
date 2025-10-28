@@ -1,66 +1,31 @@
 .timeline {
   margin-top: min(5.08929vw, 114px);
   position: relative;
-  max-width: min(45.89286vw, 1028px);
-  padding-left: min(1.78571vw, 40px);
+  max-width: min(58.03571vw, 1300px);
   margin-left: auto;
   margin-right: auto;
-}
-
-/* 메인 세로선 */
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 1px;
-  background-color: #8D8D8D;
 }
 
 /* 연도별 섹션 */
 .yearSection {
   position: relative;
-  margin-bottom: min(2.67857vw, 60px);
+  margin-bottom: min(4.46429vw, 100px);
+  display: grid;
+  grid-template-columns: min(8.92857vw, 200px) 1fr auto;
+  gap: 0;
 }
 
 .yearSection:last-child {
   margin-bottom: 0;
 }
 
-/* 연도 헤더 */
+/* 좌측: 연도 헤더 */
 .yearHeader {
-  display: flex;
-  align-items: center;
-  gap: min(0.89286vw, 20px);
-  margin-bottom: min(1.78571vw, 40px);
   position: relative;
-}
-
-/* 연도에서 세로선까지 가로선 */
-.yearHeader::before {
-  content: '';
-  position: absolute;
-  right: 100%;
-  top: 50%;
-  transform: translateY(-50%);
-  width: min(1.78571vw, 40px);
-  height: 1px;
-  background-color: #8D8D8D;
-}
-
-/* 활성 점 (세로선 위) */
-.yearHeader::after {
-  content: '';
-  position: absolute;
-  right: calc(100% + min(1.5625vw, 35px));
-  top: 50%;
-  transform: translateY(-50%);
-  width: min(0.44643vw, 10px);
-  height: min(0.44643vw, 10px);
-  background-color: #F26966;
-  border-radius: 50%;
-  z-index: 2;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-top: min(0.89286vw, 20px);
 }
 
 /* 연도 */
@@ -71,60 +36,81 @@
   letter-spacing: -0.02em;
   font-weight: 400;
   margin: 0;
+  line-height: 1.2;
 }
 
-/* 활성 점 - 사용 안 함 (::after로 대체) */
-.dotActive {
-  display: none;
+/* 연도 우측에 회색 점 */
+.yearHeader::after {
+  content: '';
+  position: absolute;
+  right: min(-1.33929vw, -30px);
+  top: min(1.16071vw, 26px);
+  width: min(0.44643vw, 10px);
+  height: min(0.44643vw, 10px);
+  background-color: #8D8D8D;
+  border-radius: 50%;
+  z-index: 2;
 }
 
-/* 내용 래퍼 */
-.contentWrapper {
-  display: flex;
-  gap: min(1.78571vw, 40px);
-  align-items: flex-start;
-  position: relative;
+/* 중앙 세로선 - 연도 헤더에서 시작 */
+.yearHeader::before {
+  content: '';
+  position: absolute;
+  right: min(-1.33929vw, -30px);
+  top: min(1.16071vw, 26px);
+  transform: translateX(50%);
+  width: min(5.22321vw, 117px);
+  background-color: #8D8D8D;
+  height: calc(100vh);
+  z-index: 1;
 }
 
-/* 이벤트 리스트 */
+/* 마지막 연도의 세로선은 짧게 */
+.yearSection:last-child .yearHeader::before {
+  height: calc(100%);
+}
+
+/* 중앙: 이벤트 리스트 */
 .eventList {
-  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: min(0.80357vw, 18px);
+  gap: min(0.89286vw, 20px);
+  padding-left: min(3.39286vw, 76px);
 }
 
 /* 이벤트 아이템 */
 .eventItem {
   display: flex;
   align-items: center;
-  position: relative;
   gap: min(0.89286vw, 20px);
+  position: relative;
 }
 
-/* 세로선에서 점까지 가로선 */
+/* 각 이벤트 좌측에 빨간 점 */
 .eventItem::before {
   content: '';
   position: absolute;
-  right: 100%;
+  left: min(-0.71429vw, -16px);
+  top: 50%;
+  transform: translate(50%, -50%);
+  width: min(0.44643vw, 10px);
+  height: min(0.44643vw, 10px);
+  background-color: #F26966;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+/* 빨간 점에서 날짜까지 가로선 */
+.eventItem::after {
+  content: '';
+  position: absolute;
+  left: min(-2.23214vw, -50px);
   top: 50%;
   transform: translateY(-50%);
   width: min(1.78571vw, 40px);
   height: 1px;
   background-color: #8D8D8D;
-}
-
-/* 회색 점 */
-.dotGray {
-  position: absolute;
-  right: calc(100% + min(1.5625vw, 35px));
-  top: 50%;
-  transform: translateY(-50%);
-  width: min(0.44643vw, 10px);
-  height: min(0.44643vw, 10px);
-  background-color: #8D8D8D;
-  border-radius: 50%;
-  z-index: 2;
+  z-index: 1;
 }
 
 /* 날짜 */
@@ -144,7 +130,7 @@
   color: #8D8D8D;
 }
 
-/* 이미지 영역 */
+/* 우측: 이미지 영역 */
 .imageArea {
   width: min(17.85714vw, 400px);
   height: min(13.83929vw, 310px);
@@ -152,10 +138,121 @@
   overflow: hidden;
   flex-shrink: 0;
   border: 0.5px solid #8D8D8D;
+  margin-left: min(2.67857vw, 60px);
+  align-self: flex-start;
 }
 
 .image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* 반응형 - 태블릿 */
+@media (max-width: 1279px) and (min-width: 768px) {
+  .timeline {
+    max-width: 90%;
+  }
+
+  .yearSection {
+    grid-template-columns: min(10vw, 150px) 1fr auto;
+  }
+
+  .year {
+    font-size: min(2vw, 32px);
+  }
+
+  .date {
+    font-size: min(1.8vw, 26px);
+    min-width: min(3vw, 50px);
+  }
+
+  .description {
+    font-size: min(1.6vw, 24px);
+  }
+
+  .imageArea {
+    width: min(20vw, 300px);
+    height: min(16vw, 240px);
+  }
+}
+
+/* 반응형 - 모바일 */
+@media (max-width: 767px) {
+  .timeline {
+    max-width: 95%;
+    margin-top: min(8vw, 60px);
+  }
+
+  .yearSection {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    margin-bottom: min(10vw, 80px);
+  }
+
+  .yearHeader {
+    grid-column: 1;
+    grid-row: 1;
+    justify-content: center;
+    padding-bottom: min(4vw, 30px);
+  }
+
+  .yearHeader::after {
+    right: auto;
+    left: 50%;
+    top: auto;
+    bottom: min(-2vw, -15px);
+    transform: translateX(-50%);
+  }
+
+  .yearHeader::before {
+    right: auto;
+    left: 50%;
+    top: auto;
+    bottom: min(-2vw, -15px);
+    height: calc(100vh);
+  }
+
+  .yearSection:last-child .yearHeader::before {
+    display: none;
+  }
+
+  .year {
+    font-size: min(5vw, 28px);
+  }
+
+  .eventList {
+    grid-column: 1;
+    grid-row: 2;
+    padding-left: min(8vw, 50px);
+    gap: min(3vw, 20px);
+  }
+
+  .eventItem::before {
+    left: min(-8vw, -50px);
+    transform: translate(50%, -50%);
+  }
+
+  .eventItem::after {
+    left: min(-6.5vw, -40px);
+    width: min(5vw, 30px);
+  }
+
+  .date {
+    font-size: min(4vw, 22px);
+    min-width: min(8vw, 50px);
+  }
+
+  .description {
+    font-size: min(3.5vw, 20px);
+  }
+
+  .imageArea {
+    grid-column: 1;
+    grid-row: 3;
+    width: 100%;
+    height: min(40vw, 250px);
+    margin-left: 0;
+    margin-top: min(4vw, 30px);
+  }
 }
