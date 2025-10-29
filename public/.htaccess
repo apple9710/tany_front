@@ -1,0 +1,44 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # HTTPS 강제 리다이렉트 (선택사항)
+  # RewriteCond %{HTTPS} off
+  # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # 실제 파일이나 디렉토리가 아닌 경우 index.html로 리다이렉트
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# 캐싱 설정
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # 이미지
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+
+  # CSS, JavaScript
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+
+  # HTML (짧은 캐시)
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+# Gzip 압축
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml
+  AddOutputFilterByType DEFLATE application/javascript application/json
+  AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# MIME 타입 설정
+<IfModule mod_mime.c>
+  AddType image/svg+xml svg svgz
+  AddEncoding gzip svgz
+</IfModule>

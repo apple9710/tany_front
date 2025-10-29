@@ -84,6 +84,7 @@
 }
 
 .guideSection {
+  margin-top: min(4.46429vw, 100px);
   padding-top: min(6.25vw, 140px);
   padding-bottom: min(11.60714vw, 260px);
   background-color: #f7f7f7;

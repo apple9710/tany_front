@@ -24,7 +24,7 @@
 
 .imageWrapper {
   width: 100%;
-  max-width: 1200px;
+  max-width: min(62.5vw, 1400px);
 }
 
 .screenshot {

@@ -37,7 +37,7 @@ const Location = () => {
   return (
     <div className={styles.page}>
       <SubPageBanner
-        backgroundImage="/images/sub_Location_banner_img.png"
+        backgroundImage="/images/sub_location_banner_img.png"
         titleEn="LOCATION"
         titleKo="오시는 길"
         subMenuItems={subMenuItems}

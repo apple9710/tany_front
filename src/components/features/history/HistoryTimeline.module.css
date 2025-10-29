@@ -6,12 +6,24 @@
   margin-right: auto;
 }
 
+/* 전체 세로선 */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: min(10.80357vw, 242px);
+  top: min(1.16071vw, 26px);
+  bottom: min(5.17857vw, 116px);
+  width: 1px;
+  background-color: #8D8D8D;
+  z-index: 0;
+}
+
 /* 연도별 섹션 */
 .yearSection {
   position: relative;
   margin-bottom: min(4.46429vw, 100px);
   display: grid;
-  grid-template-columns: min(8.92857vw, 200px) 1fr auto;
+  grid-template-columns: min(10.80357vw, 242px) 1fr auto;
   gap: 0;
 }
 
@@ -25,26 +37,28 @@
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  padding-top: min(0.89286vw, 20px);
+  padding-top: 0;
+  width: min(10.80357vw, 242px);
 }
 
 /* 연도 */
 .year {
   font-family: 'Paperozi', sans-serif;
   font-size: min(1.69643vw, 38px);
+  line-height: min(2.00893vw, 45px);
+  font-weight: 800;
+  letter-spacing: min(-0.03393vw, -0.76px);
   color: #F26966;
-  letter-spacing: -0.02em;
-  font-weight: 400;
   margin: 0;
-  line-height: 1.2;
+  min-width: min(5.58036vw, 125px);
 }
 
 /* 연도 우측에 회색 점 */
 .yearHeader::after {
   content: '';
   position: absolute;
-  right: min(-1.33929vw, -30px);
-  top: min(1.16071vw, 26px);
+  right: min(4.6875vw, 105px);
+  top: min(0.98214vw, 22px);
   width: min(0.44643vw, 10px);
   height: min(0.44643vw, 10px);
   background-color: #8D8D8D;
@@ -52,22 +66,22 @@
   z-index: 2;
 }
 
-/* 중앙 세로선 - 연도 헤더에서 시작 */
+/* 연도에서 세로선까지 가로선 */
 .yearHeader::before {
   content: '';
   position: absolute;
-  right: min(-1.33929vw, -30px);
+  right: min(2.54464vw, 57px);
   top: min(1.16071vw, 26px);
   transform: translateX(50%);
   width: min(5.22321vw, 117px);
   background-color: #8D8D8D;
-  height: calc(100vh);
+  height: 1px;
   z-index: 1;
 }
 
-/* 마지막 연도의 세로선은 짧게 */
+/* 마지막 연도도 동일한 가로선 */
 .yearSection:last-child .yearHeader::before {
-  height: calc(100%);
+  height: 1px;
 }
 
 /* 중앙: 이벤트 리스트 */
@@ -76,6 +90,7 @@
   flex-direction: column;
   gap: min(0.89286vw, 20px);
   padding-left: min(3.39286vw, 76px);
+  padding-top: min(0.26786vw, 6px);
 }
 
 /* 이벤트 아이템 */
@@ -84,14 +99,15 @@
   align-items: center;
   gap: min(0.89286vw, 20px);
   position: relative;
+  padding-left: min(1.16071vw, 26px);
 }
 
 /* 각 이벤트 좌측에 빨간 점 */
 .eventItem::before {
   content: '';
   position: absolute;
-  left: min(-0.71429vw, -16px);
-  top: 50%;
+  left: min(-0.26786vw, -6px);
+  top: calc(50% + 4px);
   transform: translate(50%, -50%);
   width: min(0.44643vw, 10px);
   height: min(0.44643vw, 10px);
@@ -104,10 +120,10 @@
 .eventItem::after {
   content: '';
   position: absolute;
-  left: min(-2.23214vw, -50px);
-  top: 50%;
+  left: min(-3.39286vw, -76px);
+  top: calc(50% + 4px);
   transform: translateY(-50%);
-  width: min(1.78571vw, 40px);
+  width: min(3.39286vw, 76px);
   height: 1px;
   background-color: #8D8D8D;
   z-index: 1;
@@ -115,18 +131,19 @@
 
 /* 날짜 */
 .date {
-  font-size: min(1.33929vw, 30px);
-  font-weight: 400;
-  letter-spacing: -0.02em;
+  font: normal normal 800 30px/35px Paperlogy;
+  letter-spacing: -0.6px;
   color: #8D8D8D;
   min-width: min(2.67857vw, 60px);
 }
 
 /* 설명 */
 .description {
-  font-size: min(1.25vw, 28px);
+  font-family: 'Pretendard', sans-serif;
+  font-size: min(1.16071vw, 26px);
+  line-height: min(1.38393vw, 31px);
   font-weight: 400;
-  letter-spacing: -0.02em;
+  letter-spacing: min(-0.02321vw, -0.52px);
   color: #8D8D8D;
 }
 

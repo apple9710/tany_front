@@ -28,7 +28,7 @@ const StandLED = () => {
   return (
     <div className={styles.page}>
       <SubPageBanner
-        backgroundImage="/images/sub_StandLED_banner_img.png"
+        backgroundImage="/images/sub_reference_banner_img.png"
         titleEn="REFERENCE"
         titleKo="래퍼런스"
         subMenuItems={subMenuItems}
