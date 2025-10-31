@@ -24,3 +24,10 @@ dist-ssr
 *.sw?
 
 /docs
+
+/answer
+
+# PHP Backend
+api/config/database.php
+uploads/
+logs/
