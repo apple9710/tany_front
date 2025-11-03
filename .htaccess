@@ -1,0 +1,43 @@
+# Apache 설정
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # API 요청은 그대로 통과
+  RewriteCond %{REQUEST_URI} ^/api/
+  RewriteRule ^ - [L]
+
+  # uploads 폴더는 그대로 통과
+  RewriteCond %{REQUEST_URI} ^/uploads/
+  RewriteRule ^ - [L]
+
+  # 실제 파일이나 디렉토리가 존재하면 그대로 통과
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+
+  # 나머지는 index.html로 라우팅 (React Router)
+  RewriteRule . /index.html [L]
+</IfModule>
+
+# CORS 설정 (필요시)
+<IfModule mod_headers.c>
+  # API 경로에만 CORS 헤더 적용
+  <FilesMatch "\.(php)$">
+    Header set Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+    Header set Access-Control-Allow-Headers "Content-Type, Authorization"
+  </FilesMatch>
+</IfModule>
+
+# 보안 설정
+<FilesMatch "\.env$">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+# PHP 설정
+<IfModule mod_php.c>
+  php_flag display_errors Off
+  php_value upload_max_filesize 10M
+  php_value post_max_size 10M
+</IfModule>

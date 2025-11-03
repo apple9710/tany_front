@@ -39,3 +39,91 @@
   color: #FFFFFF;
   margin: 0;
 }
+
+/* Responsive Design */
+@media (max-width: 1240px) {
+  .section {
+    height: 600px;
+  }
+
+  .title {
+    margin-bottom: 60px;
+  }
+
+  .firstLine,
+  .secondLine {
+    font-size: 40px;
+    line-height: 56px;
+    letter-spacing: -1px;
+  }
+
+  .description {
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .section {
+    height: 500px;
+  }
+
+  .title {
+    margin-bottom: 50px;
+  }
+
+  .firstLine,
+  .secondLine {
+    font-size: 36px;
+    line-height: 50px;
+  }
+
+  .description {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    height: 400px;
+    padding: 0 20px;
+  }
+
+  .title {
+    margin-bottom: 40px;
+  }
+
+  .firstLine,
+  .secondLine {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  .description {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    height: 350px;
+    padding: 0 16px;
+  }
+
+  .title {
+    margin-bottom: 30px;
+  }
+
+  .firstLine,
+  .secondLine {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

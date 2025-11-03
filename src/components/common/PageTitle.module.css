@@ -29,36 +29,71 @@
   margin: 0 auto;
 }
 
-/* 반응형 - 태블릿 */
-@media (max-width: 1279px) and (min-width: 768px) {
+/* Responsive Design */
+@media (max-width: 1240px) {
   .titleEn {
-    font-size: min(1.42857vw, 32px);
-    margin-bottom: min(0.44643vw, 10px);
+    font-size: 34px;
+    line-height: 40px;
+    margin-bottom: 10px;
   }
 
   .titleKo {
-    font-size: min(1.07143vw, 24px);
-    margin-bottom: min(2.14286vw, 48px);
+    font-size: 26px;
+    margin-bottom: 50px;
   }
 
   .divider {
-    width: min(14.28571vw, 320px);
+    width: 340px;
   }
 }
 
-/* 반응형 - 모바일 */
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   .titleEn {
-    font-size: min(1.07143vw, 24px);
-    margin-bottom: min(0.35714vw, 8px);
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 10px;
   }
 
   .titleKo {
-    font-size: min(0.80357vw, 18px);
-    margin-bottom: min(1.60714vw, 36px);
+    font-size: 22px;
+    margin-bottom: 45px;
   }
 
   .divider {
-    width: min(11.16071vw, 250px);
+    width: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .titleEn {
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 8px;
+  }
+
+  .titleKo {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+
+  .divider {
+    width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .titleEn {
+    font-size: 22px;
+    line-height: 28px;
+    margin-bottom: 8px;
+  }
+
+  .titleKo {
+    font-size: 18px;
+    margin-bottom: 35px;
+  }
+
+  .divider {
+    width: 240px;
   }
 }

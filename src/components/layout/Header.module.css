@@ -86,38 +86,84 @@
   background-color: var(--color-primary);
 }
 
-/* 반응형 - 태블릿 이하 (메뉴 숨김) */
-@media (max-width: 1279px) {
+/* Responsive Design */
+@media (max-width: 1240px) {
   .container {
-    height: min(3.57143vw, 80px);
+    height: 90px;
+    padding: 0 30px;
   }
 
   .logoImage {
-    width: min(4.01786vw, 90px);
+    width: 95px;
+  }
+
+  .nav {
+    gap: 80px;
+  }
+
+  .navItem {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    height: 80px;
+    padding: 0 20px;
+  }
+
+  .logoImage {
+    width: 85px;
   }
 
   /* 네비게이션 숨김 */
   .nav {
     display: none;
   }
+
+  .menuButton span {
+    width: 22px;
+  }
 }
 
-/* 반응형 - 모바일 */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .container {
-    height: min(2.67857vw, 60px);
+    height: 70px;
+    padding: 0 20px;
   }
 
   .logoImage {
-    width: min(3.34821vw, 75px);
+    width: 75px;
   }
 
   .menuButton {
-    padding: min(0.35714vw, 8px);
+    padding: 8px;
+    gap: 5px;
   }
 
   .menuButton span {
-    width: min(0.89286vw, 20px);
-    height: 1.5px;
+    width: 22px;
+    height: 2px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    height: 60px;
+    padding: 0 16px;
+  }
+
+  .logoImage {
+    width: 70px;
+  }
+
+  .menuButton {
+    padding: 6px;
+    gap: 4px;
+  }
+
+  .menuButton span {
+    width: 20px;
+    height: 2px;
   }
 }

@@ -40,3 +40,91 @@
   justify-content: center;
   text-align: center;
 }
+
+/* Responsive Design */
+@media (max-width: 1240px) {
+  .list {
+    row-gap: 80px;
+    margin-top: 50px;
+  }
+
+  .imageBox {
+    width: 280px;
+    height: 360px;
+    border-radius: 14px;
+    margin-bottom: 32px;
+  }
+
+  .titleBox {
+    width: 280px;
+    height: 56px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .list {
+    row-gap: 70px;
+    margin-top: 45px;
+  }
+
+  .imageBox {
+    width: 260px;
+    height: 340px;
+    border-radius: 12px;
+    margin-bottom: 28px;
+  }
+
+  .titleBox {
+    width: 260px;
+    height: 52px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .list {
+    flex-direction: column;
+    row-gap: 60px;
+    margin-top: 40px;
+  }
+
+  .item {
+    width: 100%;
+  }
+
+  .imageBox {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    aspect-ratio: 3 / 4;
+    border-radius: 12px;
+    margin-bottom: 24px;
+  }
+
+  .titleBox {
+    width: 100%;
+    max-width: 350px;
+    height: 50px;
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 480px) {
+  .list {
+    row-gap: 50px;
+    margin-top: 35px;
+  }
+
+  .imageBox {
+    max-width: 300px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  .titleBox {
+    max-width: 300px;
+    height: 48px;
+    font-size: 16px;
+  }
+}

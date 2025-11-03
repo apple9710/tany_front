@@ -128,32 +128,136 @@
   border-radius: min(0.26786vw, 6px);
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
+/* Responsive Design */
+@media (max-width: 1240px) {
+  .banner {
+    height: 700px;
+  }
+
+  .firstLine,
+  .secondLine {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.8px;
+  }
+
   .prevButton {
-    left: min(0.89286vw, 20px);
+    left: calc(50% - 550px);
   }
 
   .nextButton {
-    right: min(0.89286vw, 20px);
+    right: calc(50% - 550px);
   }
 
-  .slideText {
-    font-size: min(1.60714vw, 36px);
-    padding: 0 min(0.89286vw, 20px);
+  .indicators {
+    bottom: 35px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .banner {
+    height: 600px;
+  }
+
+  .firstLine,
+  .secondLine {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .prevButton {
+    left: 20px;
+  }
+
+  .nextButton {
+    right: 20px;
+  }
+
+  .navButton img {
+    width: 50px;
+    height: auto;
+  }
+
+  .indicators {
+    bottom: 30px;
+  }
+
+  .indicator {
+    width: 10px;
+    height: 10px;
+  }
+
+  .indicator.activeIndicator {
+    width: 28px;
   }
 }
 
 @media (max-width: 768px) {
   .banner {
-    height: 60vh;
+    height: 500px;
   }
 
-  .slideText {
-    font-size: min(1.07143vw, 24px);
+  .firstLine,
+  .secondLine {
+    font-size: 24px;
+    line-height: 32px;
+    padding: 0 20px;
   }
 
   .navButton img {
-    width: min(1.78571vw, 40px);
+    width: 40px;
+  }
+
+  .indicators {
+    bottom: 25px;
+    gap: 10px;
+  }
+
+  .indicator {
+    width: 8px;
+    height: 8px;
+  }
+
+  .indicator.activeIndicator {
+    width: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
+    height: 400px;
+  }
+
+  .firstLine,
+  .secondLine {
+    font-size: 20px;
+    line-height: 28px;
+    padding: 0 16px;
+  }
+
+  .prevButton {
+    left: 10px;
+  }
+
+  .nextButton {
+    right: 10px;
+  }
+
+  .navButton img {
+    width: 32px;
+  }
+
+  .indicators {
+    bottom: 20px;
+    gap: 8px;
+  }
+
+  .indicator {
+    width: 6px;
+    height: 6px;
+  }
+
+  .indicator.activeIndicator {
+    width: 20px;
   }
 }

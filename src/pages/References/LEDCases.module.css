@@ -10,4 +10,42 @@
 .container {
   max-width: var(--container-max-width);
   margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+/* Responsive Design */
+@media (max-width: 1240px) {
+  .content {
+    padding-top: 100px;
+    padding-bottom: 200px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .content {
+    padding-top: 80px;
+    padding-bottom: 160px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding-top: 60px;
+    padding-bottom: 120px;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding-top: 50px;
+    padding-bottom: 100px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
 }

@@ -162,3 +162,292 @@
   height: auto;
   display: block;
 }
+
+/* Responsive Design */
+@media (max-width: 1240px) {
+  .content {
+    padding-top: 100px;
+  }
+
+  .intro {
+    font-size: 34px;
+    line-height: 40px;
+    margin: 90px 0 100px 0;
+  }
+
+  .sectionTitle {
+    font-size: 34px;
+    line-height: 40px;
+    margin-bottom: 14px;
+  }
+
+  .sectionDescription,
+  .guideDescription {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .logoImageWrapper {
+    margin: 50px auto;
+  }
+
+  .downloadButton {
+    width: 280px;
+    height: 65px;
+    font-size: 24px;
+    margin-top: 50px;
+  }
+
+  .guideSection {
+    margin-top: 80px;
+    padding-top: 120px;
+    padding-bottom: 200px;
+  }
+
+  .guideRow {
+    max-width: 90%;
+    margin: 90px auto 0;
+  }
+
+  .guideRow:nth-child(3) {
+    margin-top: 85px;
+    padding-right: 0;
+  }
+
+  .guideRow:nth-child(4) {
+    margin-top: 100px;
+  }
+
+  .guideText {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .ciImageWrapper {
+    margin-top: 120px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .content {
+    padding-top: 80px;
+  }
+
+  .intro {
+    font-size: 30px;
+    line-height: 36px;
+    margin: 75px 0 85px 0;
+  }
+
+  .sectionTitle {
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 12px;
+  }
+
+  .sectionDescription,
+  .guideDescription {
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  .logoImageWrapper {
+    margin: 45px auto;
+  }
+
+  .downloadButton {
+    width: 260px;
+    height: 60px;
+    font-size: 22px;
+    margin-top: 45px;
+  }
+
+  .guideSection {
+    margin-top: 70px;
+    padding-top: 100px;
+    padding-bottom: 160px;
+  }
+
+  .guideRow {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 70px auto 0;
+  }
+
+  .guideRow:nth-child(3) {
+    margin-top: 70px;
+  }
+
+  .guideRow:nth-child(4) {
+    margin-top: 70px;
+  }
+
+  .guideText {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  .guideImage {
+    max-width: 100%;
+  }
+
+  .guideRow:nth-child(3) .guideImage {
+    max-width: 100%;
+  }
+
+  .ciImageWrapper {
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding-top: 60px;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .intro {
+    font-size: 24px;
+    line-height: 32px;
+    margin: 60px 0 70px 0;
+  }
+
+  .divider {
+    width: 50px;
+  }
+
+  .logoSection {
+    margin-top: 18px;
+  }
+
+  .sectionTitle {
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 10px;
+  }
+
+  .sectionDescription,
+  .guideDescription {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .logoImageWrapper {
+    width: 100%;
+    margin: 40px auto;
+  }
+
+  .downloadButton {
+    width: 100%;
+    max-width: 320px;
+    height: 56px;
+    font-size: 20px;
+    margin-top: 40px;
+  }
+
+  .guideSection {
+    margin-top: 60px;
+    padding-top: 80px;
+    padding-bottom: 120px;
+  }
+
+  .guideRow {
+    margin: 60px auto 0;
+  }
+
+  .guideRow:nth-child(3),
+  .guideRow:nth-child(4) {
+    margin-top: 60px;
+  }
+
+  .guideText {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .ciImageWrapper {
+    width: 100%;
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding-top: 50px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .intro {
+    font-size: 20px;
+    line-height: 28px;
+    margin: 50px 0 60px 0;
+  }
+
+  .divider {
+    width: 45px;
+  }
+
+  .logoSection {
+    margin-top: 16px;
+  }
+
+  .sectionTitle {
+    font-size: 22px;
+    line-height: 28px;
+    margin-bottom: 8px;
+  }
+
+  .sectionDescription,
+  .guideDescription {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .logoImageWrapper {
+    margin: 35px auto;
+  }
+
+  .downloadButton {
+    width: 100%;
+    max-width: 100%;
+    height: 52px;
+    font-size: 18px;
+    margin-top: 35px;
+  }
+
+  .guideSection {
+    margin-top: 50px;
+    padding-top: 70px;
+    padding-bottom: 100px;
+  }
+
+  .guideSection .divider {
+    margin-bottom: 18px;
+  }
+
+  .guideRow {
+    margin: 50px auto 0;
+  }
+
+  .guideRow:nth-child(3),
+  .guideRow:nth-child(4) {
+    margin-top: 50px;
+  }
+
+  .guideText {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .ciImageWrapper {
+    margin-top: 70px;
+  }
+}

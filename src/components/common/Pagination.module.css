@@ -47,32 +47,79 @@
   opacity: 0.5;
 }
 
-/* 반응형 - 태블릿 */
-@media (max-width: 1279px) and (min-width: 768px) {
+/* Responsive Design */
+@media (max-width: 1240px) {
+  .paginationWrapper {
+    margin-top: 80px;
+  }
+
   .pagination {
-    height: min(2.67857vw, 60px);
-    padding: 0 min(1.33929vw, 30px);
-    gap: min(0.71429vw, 16px);
+    height: 65px;
+    padding: 0 35px;
+    gap: 18px;
   }
 
   .navButton,
   .pageButton {
-    font-size: min(0.98214vw, 22px);
-    min-width: min(1.42857vw, 32px);
+    font-size: 24px;
+    line-height: 28px;
+    min-width: 36px;
   }
 }
 
-/* 반응형 - 모바일 */
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
+  .paginationWrapper {
+    margin-top: 70px;
+  }
+
   .pagination {
-    height: min(2.23214vw, 50px);
-    padding: 0 min(0.89286vw, 20px);
-    gap: min(0.44643vw, 10px);
+    height: 60px;
+    padding: 0 30px;
+    gap: 16px;
   }
 
   .navButton,
   .pageButton {
-    font-size: min(0.80357vw, 18px);
-    min-width: min(1.07143vw, 24px);
+    font-size: 22px;
+    line-height: 26px;
+    min-width: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .paginationWrapper {
+    margin-top: 60px;
+  }
+
+  .pagination {
+    height: 54px;
+    padding: 0 24px;
+    gap: 12px;
+  }
+
+  .navButton,
+  .pageButton {
+    font-size: 20px;
+    line-height: 24px;
+    min-width: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .paginationWrapper {
+    margin-top: 50px;
+  }
+
+  .pagination {
+    height: 50px;
+    padding: 0 20px;
+    gap: 10px;
+  }
+
+  .navButton,
+  .pageButton {
+    font-size: 18px;
+    line-height: 22px;
+    min-width: 24px;
   }
 }

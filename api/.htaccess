@@ -1,0 +1,8 @@
+# API 폴더 설정
+# PHP 실행 허용 (API 엔드포인트)
+Options -Indexes
+AddDefaultCharset UTF-8
+
+# 에러 페이지 (선택)
+ErrorDocument 404 /api/404.json
+ErrorDocument 500 /api/500.json

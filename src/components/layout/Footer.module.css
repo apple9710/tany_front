@@ -56,57 +56,130 @@
   margin: 0;
 }
 
-/* 반응형 - 태블릿 */
-@media (max-width: 1279px) and (min-width: 768px) {
+/* Responsive Design */
+@media (max-width: 1240px) {
   .footer {
-    padding: min(3.125vw, 70px) 0 min(2.45536vw, 55px);
+    padding: 70px 0 58px;
   }
 
   .logo {
-    margin-bottom: min(1.33929vw, 30px);
+    width: 95px;
+    margin-bottom: 32px;
   }
 
   .info {
-    margin-bottom: min(2.00893vw, 45px);
+    margin-bottom: 48px;
   }
 
   .infoRow {
-    gap: min(0.89286vw, 20px);
-    font-size: min(0.58036vw, 13px);
+    gap: 24px;
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+
+  .infoItem {
+    gap: 7px;
   }
 
   .copyright {
-    font-size: min(0.58036vw, 13px);
+    font-size: 13px;
   }
 }
 
-/* 반응형 - 모바일 */
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   .footer {
-    padding: min(2.67857vw, 60px) 0 min(2.23214vw, 50px);
+    padding: 60px 0 50px;
   }
 
   .logo {
-    width: min(3.57143vw, 80px);
-    margin-bottom: min(1.07143vw, 24px);
+    width: 88px;
+    margin-bottom: 28px;
   }
 
   .info {
-    margin-bottom: min(1.78571vw, 40px);
+    margin-bottom: 42px;
+  }
+
+  .infoRow {
+    gap: 20px;
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+
+  .infoItem {
+    gap: 6px;
+  }
+
+  .copyright {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 50px 0 42px;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .logo {
+    width: 80px;
+    margin-bottom: 24px;
+  }
+
+  .info {
+    margin-bottom: 36px;
   }
 
   .infoRow {
     flex-direction: column;
-    gap: min(0.53571vw, 12px);
-    font-size: min(0.53571vw, 12px);
+    gap: 10px;
+    font-size: 12px;
+    margin-bottom: 16px;
   }
 
   .infoItem {
     flex-direction: column;
-    gap: min(0.17857vw, 4px);
+    gap: 4px;
+    align-items: flex-start;
   }
 
   .copyright {
-    font-size: min(0.53571vw, 12px);
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 40px 0 36px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .logo {
+    width: 72px;
+    margin-bottom: 20px;
+  }
+
+  .info {
+    margin-bottom: 30px;
+  }
+
+  .infoRow {
+    gap: 8px;
+    font-size: 11px;
+    margin-bottom: 14px;
+  }
+
+  .infoItem {
+    gap: 3px;
+  }
+
+  .copyright {
+    font-size: 11px;
   }
 }

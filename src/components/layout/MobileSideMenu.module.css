@@ -145,27 +145,137 @@
   color: var(--color-primary);
 }
 
-/* PC에서는 숨김 */
-@media (min-width: 1280px) {
+/* Responsive Design */
+
+/* PC에서는 숨김 (1024px 초과) */
+@media (min-width: 1025px) {
   .overlay,
   .sideMenu {
     display: none;
   }
 }
 
-/* 모바일 최적화 */
-@media (max-width: 767px) {
+/* 1240px 이하 */
+@media (max-width: 1240px) {
   .sideMenu {
-    width: 85%;
+    max-width: 380px;
+  }
+
+  .menuHeader {
+    padding: 18px;
+  }
+
+  .closeButton {
+    width: 38px;
+    height: 38px;
+  }
+
+  .menuList {
+    padding: 18px 0;
   }
 
   .menuButton {
-    font-size: min(0.71429vw, 16px);
-    padding: min(0.80357vw, 18px) min(0.89286vw, 20px);
+    padding: 18px 22px;
+    font-size: 17px;
   }
 
   .subMenuItem {
-    font-size: min(0.625vw, 14px);
-    padding: min(0.625vw, 14px) min(0.89286vw, 20px) min(0.625vw, 14px) min(1.78571vw, 40px);
+    padding: 14px 22px 14px 44px;
+    font-size: 15px;
+  }
+}
+
+/* 1024px 이하 */
+@media (max-width: 1024px) {
+  .sideMenu {
+    max-width: 360px;
+  }
+
+  .menuButton {
+    padding: 16px 20px;
+    font-size: 16px;
+  }
+
+  .subMenuItem {
+    padding: 12px 20px 12px 40px;
+    font-size: 14px;
+  }
+}
+
+/* 768px 이하 */
+@media (max-width: 768px) {
+  .sideMenu {
+    width: 85%;
+    max-width: 340px;
+  }
+
+  .menuHeader {
+    padding: 20px;
+  }
+
+  .closeButton {
+    width: 40px;
+    height: 40px;
+  }
+
+  .menuList {
+    padding: 20px 0;
+  }
+
+  .menuButton {
+    padding: 18px 20px;
+    font-size: 16px;
+  }
+
+  .subMenuItem {
+    padding: 14px 20px 14px 40px;
+    font-size: 14px;
+  }
+}
+
+/* 480px 이하 (모바일) */
+@media (max-width: 480px) {
+  .sideMenu {
+    width: 90%;
+    max-width: 320px;
+  }
+
+  .menuHeader {
+    padding: 18px;
+  }
+
+  .closeButton {
+    width: 38px;
+    height: 38px;
+  }
+
+  .closeButton svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .menuList {
+    padding: 18px 0;
+  }
+
+  .menuButton {
+    padding: 16px 18px;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .arrow {
+    width: 16px;
+    height: 16px;
+  }
+
+  .subMenuItem {
+    padding: 13px 18px 13px 36px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .subMenuOpen {
+    max-height: 450px;
   }
 }

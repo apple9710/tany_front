@@ -68,3 +68,137 @@
   background-color: #F26966;
   color: #FFFFFF;
 }
+
+/* Responsive Design */
+@media (max-width: 1240px) {
+  .section {
+    padding-top: 100px;
+    padding-bottom: 200px;
+  }
+
+  .textArea {
+    margin-bottom: 40px;
+  }
+
+  .title {
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 10px;
+  }
+
+  .subtitle {
+    font-size: 22px;
+  }
+
+  .imageWrapper {
+    max-width: 900px;
+    margin-bottom: 50px;
+  }
+
+  .button {
+    width: 260px;
+    height: 60px;
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .section {
+    padding-top: 80px;
+    padding-bottom: 160px;
+  }
+
+  .textArea {
+    margin-bottom: 35px;
+  }
+
+  .title {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
+
+  .imageWrapper {
+    max-width: 700px;
+    margin-bottom: 40px;
+  }
+
+  .button {
+    width: 240px;
+    height: 56px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding-top: 60px;
+    padding-bottom: 120px;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .textArea {
+    margin-bottom: 30px;
+  }
+
+  .title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .imageWrapper {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .button {
+    width: 220px;
+    height: 52px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding-top: 50px;
+    padding-bottom: 100px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .textArea {
+    margin-bottom: 25px;
+  }
+
+  .title {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .imageWrapper {
+    margin-bottom: 25px;
+  }
+
+  .button {
+    width: 100%;
+    max-width: 280px;
+    height: 50px;
+    font-size: 17px;
+  }
+}

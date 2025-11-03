@@ -95,53 +95,111 @@
   color: #F26966;
 }
 
-/* 반응형 - 태블릿 */
-@media (max-width: 1279px) and (min-width: 768px) {
+/* Responsive Design */
+@media (max-width: 1240px) {
   .banner {
-    height: min(17.85714vw, 400px);
-    margin-top: min(3.57143vw, 80px);
+    height: 420px;
+    margin-top: 90px;
   }
 
   .titleEn,
   .titleKo {
-    font-size: min(1.42857vw, 32px);
+    font-size: 36px;
+    line-height: 42px;
   }
 
   .subMenu {
-    height: min(3.57143vw, 80px);
+    height: 90px;
   }
 
   .subMenuContainer {
-    gap: min(2.67857vw, 60px);
+    gap: 100px;
   }
 
   .subMenuItem {
-    font-size: min(0.80357vw, 18px);
+    font-size: 20px;
   }
 }
 
-/* 반응형 - 모바일 */
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   .banner {
-    height: min(13.39286vw, 300px);
-    margin-top: min(2.67857vw, 60px);
+    height: 380px;
+    margin-top: 80px;
   }
 
   .titleEn,
   .titleKo {
-    font-size: min(1.07143vw, 24px);
+    font-size: 32px;
+    line-height: 38px;
   }
 
   .subMenu {
-    height: min(2.67857vw, 60px);
+    height: 80px;
   }
 
   .subMenuContainer {
-    gap: min(0.89286vw, 20px);
-    padding: 0 min(0.89286vw, 20px);
+    gap: 60px;
   }
 
   .subMenuItem {
-    font-size: min(0.625vw, 14px);
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    height: 320px;
+    margin-top: 70px;
+  }
+
+  .titleEn,
+  .titleKo {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .subMenu {
+    height: 70px;
+  }
+
+  .subMenuContainer {
+    gap: 30px;
+    padding: 0 20px;
+  }
+
+  .subMenuItem {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
+    height: 280px;
+    margin-top: 60px;
+  }
+
+  .titleEn,
+  .titleKo {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .titleEn {
+    margin-bottom: 8px;
+  }
+
+  .subMenu {
+    height: 60px;
+  }
+
+  .subMenuContainer {
+    gap: 20px;
+    padding: 0 16px;
+    overflow-x: auto;
+    justify-content: flex-start;
+  }
+
+  .subMenuItem {
+    font-size: 14px;
   }
 }

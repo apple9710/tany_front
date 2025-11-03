@@ -58,4 +58,35 @@
   --transition-fast: 150ms ease-in-out;
   --transition-normal: 250ms ease-in-out;
   --transition-slow: 350ms ease-in-out;
+
+  /* Breakpoints (for reference) */
+  --breakpoint-xl: 1240px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-md: 768px;
+  --breakpoint-sm: 480px;
+}
+
+/* Responsive Container Width */
+@media (max-width: 1240px) {
+  :root {
+    --container-max-width: 90vw;
+  }
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --container-max-width: 92vw;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --container-max-width: 94vw;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --container-max-width: 95vw;
+  }
 }
