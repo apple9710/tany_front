@@ -25,6 +25,7 @@ import AdminResources from './pages/Admin/Resources'
 import Inquiries from './pages/Admin/Inquiries'
 import './styles/variables.css'
 import './styles/reset.css'
+import './styles/font.css'
 import './App.css'
 
 function App() {
