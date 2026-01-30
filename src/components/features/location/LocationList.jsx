@@ -5,7 +5,7 @@ const LocationList = ({ data }) => {
   return (
     <div className={styles.list}>
       {data.map((item, index) => (
-        <div key={index} className={styles.item}>
+        <div key={index} className={styles.item} data-aos="fade-up" data-aos-delay={index * 100}>
           <h3 className={styles.title}>{item.name}</h3>
           <p className={styles.address}>{item.address}</p>
           <div className={styles.imageWrapper}>

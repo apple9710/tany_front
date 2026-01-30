@@ -23,6 +23,7 @@ import Certifications from './pages/Admin/Certifications'
 import AdminReferences from './pages/Admin/References'
 import AdminResources from './pages/Admin/Resources'
 import Inquiries from './pages/Admin/Inquiries'
+import ResetPassword from './pages/Admin/ResetPassword'
 import './styles/variables.css'
 import './styles/reset.css'
 import './styles/font.css'
@@ -34,6 +35,7 @@ function App() {
       <Routes>
         {/* 어드민 로그인 */}
         <Route path="/admin/login" element={<AdminLogin />} />
+        <Route path="/admin/reset-password" element={<ResetPassword />} />
 
         {/* 어드민 페이지 (레이아웃 포함) */}
         <Route path="/admin/*" element={<AdminLayout />}>

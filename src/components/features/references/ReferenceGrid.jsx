@@ -5,7 +5,7 @@ const ReferenceGrid = ({ data }) => {
   return (
     <div className={styles.grid}>
       {data.map((item, index) => (
-        <div key={index} className={styles.item}>
+        <div key={index} className={styles.item} data-aos="fade-up" data-aos-delay={(index % 4) * 100}>
           <div className={styles.imageBox}>
             <img src={getPublicUrl(item.image)} alt={item.title} className={styles.image} />
             <div className={styles.textBox}>

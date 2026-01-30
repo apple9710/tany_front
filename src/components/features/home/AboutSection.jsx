@@ -6,13 +6,13 @@ const AboutSection = () => {
     <section className={styles.section}>
       <div className={styles.container}>
         {/* 주제목 */}
-        <h2 className={styles.title}>ABOUT TANY</h2>
+        <h2 className={styles.title} data-aos="fade-up">ABOUT TANY</h2>
 
         {/* 부제목 */}
-        <p className={styles.subtitle}>LED 전광판 · 사이니지 전문기업</p>
+        <p className={styles.subtitle} data-aos="fade-up" data-aos-delay="100">LED 전광판 · 사이니지 전문기업</p>
 
         {/* 이미지 */}
-        <div className={styles.imageWrapper}>
+        <div className={styles.imageWrapper} data-aos="fade-up" data-aos-delay="200">
           <img
             src={getPublicUrl('/images/main_sec02_img.png')}
             alt="ABOUT TANY"
@@ -21,7 +21,7 @@ const AboutSection = () => {
         </div>
 
         {/* 버튼 */}
-        <button className={styles.button}>
+        <button className={styles.button} data-aos="fade-up" data-aos-delay="300">
           설치사례 &gt;
         </button>
       </div>

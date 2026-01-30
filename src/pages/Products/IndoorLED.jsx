@@ -69,16 +69,16 @@ const IndoorLED = () => {
         <div className={styles.container}>
           {/* 제품 소개 섹션 */}
           <section className={styles.productIntro}>
-            <h2 className={styles.productTitleEn}>INDOOR LED DISPLAY SERIES</h2>
-            <h3 className={styles.productTitleKo}>실내용 LED 전광판</h3>
-            <div className={styles.divider}></div>
+            <h2 className={styles.productTitleEn} data-aos="fade-up">INDOOR LED DISPLAY SERIES</h2>
+            <h3 className={styles.productTitleKo} data-aos="fade-up" data-aos-delay="50">실내용 LED 전광판</h3>
+            <div className={styles.divider} data-aos="fade-up" data-aos-delay="100"></div>
 
-            <p className={styles.productDescription}>
+            <p className={styles.productDescription} data-aos="fade-up" data-aos-delay="150">
               실내용 LED 안내전광판은 베젤이 없는 슬림한 디자인으로 세미나, 연회장, 대강당 등의 실내 장소에서<br />
               형태별 맞춤형 전문 시공을 통해 세련된 공간을 연출하며, 밝고 생동감 넘치는 화면으로 몰입감을 더하여 효과적인 광고, 홍보 콘텐츠 전달이 가능합니다.
             </p>
 
-            <div className={styles.productImageWrapper}>
+            <div className={styles.productImageWrapper} data-aos="fade-up" data-aos-delay="200">
               <img
                 src="/images/product_indoor_led.png"
                 alt="실내용 LED 전광판"
@@ -86,21 +86,21 @@ const IndoorLED = () => {
               />
             </div>
 
-            <button className={styles.referenceButton} onClick={handleReferenceClick}>
+            <button className={styles.referenceButton} onClick={handleReferenceClick} data-aos="fade-up" data-aos-delay="250">
               설치사례 &gt;
             </button>
           </section>
 
           {/* 제품 이미지 섹션 */}
           <section className={styles.productImagesSection}>
-            <div className={styles.imageLeft}>
+            <div className={styles.imageLeft} data-aos="fade-right">
               <img
                 src="/images/product_led_img_01.png"
                 alt="LED 제품 이미지 1"
                 className={styles.productGalleryImage}
               />
             </div>
-            <div className={styles.imageRight}>
+            <div className={styles.imageRight} data-aos="fade-left">
               <img
                 src="/images/product_led_img_02.png"
                 alt="LED 제품 이미지 2"
@@ -117,7 +117,7 @@ const IndoorLED = () => {
           {/* 특징 섹션 */}
           <section className={styles.featuresSection}>
             {features.map((feature, index) => (
-              <div key={index} className={styles.featureItem}>
+              <div key={index} className={styles.featureItem} data-aos="fade-up" data-aos-delay={index * 100}>
                 <div className={styles.featureContent}>
                   <div className={styles.featureTitleWrapper}>
                     <img
@@ -135,11 +135,11 @@ const IndoorLED = () => {
 
           {/* SPEC 섹션 */}
           <section className={styles.specSection}>
-            <h2 className={styles.productTitleEn}>SPEC</h2>
-            <h3 className={styles.productTitleKo}>제품 상세스펙</h3>
-            <div className={styles.divider}></div>
+            <h2 className={styles.productTitleEn} data-aos="fade-up">SPEC</h2>
+            <h3 className={styles.productTitleKo} data-aos="fade-up" data-aos-delay="50">제품 상세스펙</h3>
+            <div className={styles.divider} data-aos="fade-up" data-aos-delay="100"></div>
 
-            <table className={styles.table}>
+            <table className={styles.table} data-aos="fade-up" data-aos-delay="150">
               <thead>
                 <tr>
                   <th>구분</th>
@@ -249,11 +249,11 @@ const IndoorLED = () => {
 
           {/* OPTION 섹션 */}
           <section className={styles.optionSection}>
-            <h2 className={styles.productTitleEn}>OPTION</h2>
-            <h3 className={styles.productTitleKo}>추가 선택 옵션</h3>
-            <div className={styles.divider}></div>
+            <h2 className={styles.productTitleEn} data-aos="fade-up">OPTION</h2>
+            <h3 className={styles.productTitleKo} data-aos="fade-up" data-aos-delay="50">추가 선택 옵션</h3>
+            <div className={styles.divider} data-aos="fade-up" data-aos-delay="100"></div>
 
-            <table className={styles.optionTable}>
+            <table className={styles.optionTable} data-aos="fade-up" data-aos-delay="150">
               <thead>
                 <tr>
                   <th>구분</th>

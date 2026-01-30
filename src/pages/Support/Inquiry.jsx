@@ -63,7 +63,7 @@ const Inquiry = () => {
           {/* 문의 폼 */}
           <form className={styles.form} onSubmit={handleSubmit}>
             {/* 개인정보 수집 및 이용동의 */}
-            <div className={styles.privacySection}>
+            <div className={styles.privacySection} data-aos="fade-up">
               <h4 className={styles.privacyTitle}>개인정보수집 및 이용동의</h4>
               <div className={styles.privacyContent}>
                 <p>당사는 귀하의 개인정보보호를 매우 중요시하며,『개인정보보호법』상의 개인정보보호 규정을 준수하고 있습니다.</p>
@@ -102,7 +102,7 @@ const Inquiry = () => {
 
             {/* 폼 필드들 */}
             {/* 성명 */}
-            <div className={styles.formGroup}>
+            <div className={styles.formGroup} data-aos="fade-up" data-aos-delay="100">
               <label htmlFor="name" className={styles.labelRequired}>
                 성명<span className={styles.required}>*</span>
               </label>
@@ -118,7 +118,7 @@ const Inquiry = () => {
             </div>
 
             {/* 회사명 */}
-            <div className={styles.formGroup}>
+            <div className={styles.formGroup} data-aos="fade-up" data-aos-delay="150">
               <label htmlFor="company" className={styles.label}>
                 회사명
               </label>
@@ -134,7 +134,7 @@ const Inquiry = () => {
             </div>
 
             {/* 연락처 */}
-            <div className={styles.formGroup}>
+            <div className={styles.formGroup} data-aos="fade-up" data-aos-delay="200">
               <label htmlFor="phone" className={styles.labelRequired}>
                 연락처<span className={styles.required}>*</span>
               </label>
@@ -150,7 +150,7 @@ const Inquiry = () => {
             </div>
 
             {/* 이메일 */}
-            <div className={styles.formGroup}>
+            <div className={styles.formGroup} data-aos="fade-up" data-aos-delay="250">
               <label htmlFor="email" className={styles.label}>
                 이메일
               </label>
@@ -166,7 +166,7 @@ const Inquiry = () => {
             </div>
 
             {/* 문의내용 */}
-            <div className={`${styles.formGroup} ${styles.formGroupVertical}`}>
+            <div className={`${styles.formGroup} ${styles.formGroupVertical}`} data-aos="fade-up" data-aos-delay="300">
               <label htmlFor="message" className={styles.labelRequired}>
                 문의내용<span className={styles.required}>*</span>
               </label>
@@ -182,7 +182,7 @@ const Inquiry = () => {
             </div>
 
             {/* 제출 버튼 */}
-            <div className={styles.submitWrapper}>
+            <div className={styles.submitWrapper} data-aos="fade-up" data-aos-delay="350">
               <button type="submit" className={styles.submitButton}>
                 문의하기
               </button>

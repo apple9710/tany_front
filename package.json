@@ -19,6 +19,7 @@
   "description": "Tany - LED 전광판 제조/판매 웹사이트",
   "dependencies": {
     "@vitejs/plugin-react": "^5.0.4",
+    "aos": "^2.3.4",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-router-dom": "^7.9.4",

@@ -27,13 +27,13 @@ const ProductSection = () => {
     <section className={styles.section}>
       <div className={styles.container}>
         {/* 주제목 */}
-        <h2 className={styles.title}>PRODUCT</h2>
+        <h2 className={styles.title} data-aos="fade-up">PRODUCT</h2>
 
         {/* 부제목 */}
-        <p className={styles.subtitle}>LED 제품 종류</p>
+        <p className={styles.subtitle} data-aos="fade-up" data-aos-delay="100">LED 제품 종류</p>
 
         {/* 탭 버튼들 */}
-        <div className={styles.tabButtons}>
+        <div className={styles.tabButtons} data-aos="fade-up" data-aos-delay="200">
           {tabs.map((tab) => (
             <button
               key={tab.id}
@@ -48,7 +48,7 @@ const ProductSection = () => {
         </div>
 
         {/* 탭 컨텐츠 */}
-        <div className={styles.tabContent}>
+        <div className={styles.tabContent} data-aos="fade-up" data-aos-delay="300">
           <div className={styles.contentLeft}>
             {/* 타이틀 */}
             <h3 className={styles.contentTitle}>{tabContent.title}</h3>

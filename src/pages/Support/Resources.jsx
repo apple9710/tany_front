@@ -58,7 +58,7 @@ const Resources = () => {
 
           <div className={styles.resourcesList}>
             {resourcesData.map((resource, index) => (
-              <div key={resource.id}>
+              <div key={resource.id} data-aos="fade-up" data-aos-delay={index * 100}>
                 <div className={styles.resourceItem}>
                   <div className={styles.resourceInfo}>
                     <p className={styles.resourceDate}>{resource.date}</p>

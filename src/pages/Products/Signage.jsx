@@ -56,16 +56,16 @@ const Signage = () => {
         <div className={styles.container}>
           {/* 제품 소개 섹션 */}
           <section className={styles.productIntro}>
-            <h2 className={styles.productTitleEn}>SIGNAGE SERIES</h2>
-            <h3 className={styles.productTitleKo}>사이니지</h3>
-            <div className={styles.divider}></div>
+            <h2 className={styles.productTitleEn} data-aos="fade-up">SIGNAGE SERIES</h2>
+            <h3 className={styles.productTitleKo} data-aos="fade-up" data-aos-delay="50">사이니지</h3>
+            <div className={styles.divider} data-aos="fade-up" data-aos-delay="100"></div>
 
-            <p className={styles.productDescription}>
+            <p className={styles.productDescription} data-aos="fade-up" data-aos-delay="150">
               사이니지는 베젤이 거의 없는 디자인으로 감각적인 공간 연출과 몰입감을 선사합니다.<br />
               (주)타니는 고객사의 비즈니스 환경에 맞는 최적의 제품과 솔루션을 제공합니다.
             </p>
 
-            <div className={styles.productImageWrapper}>
+            <div className={styles.productImageWrapper} data-aos="fade-up" data-aos-delay="200">
               <img
                 src="/images/product_signage.png"
                 alt="사이니지"
@@ -73,21 +73,21 @@ const Signage = () => {
               />
             </div>
 
-            <button className={styles.referenceButton} onClick={handleReferenceClick}>
+            <button className={styles.referenceButton} onClick={handleReferenceClick} data-aos="fade-up" data-aos-delay="250">
               설치사례 &gt;
             </button>
           </section>
 
           {/* 제품 이미지 섹션 */}
           <section className={styles.productImagesSection}>
-            <div className={styles.imageLeft}>
+            <div className={styles.imageLeft} data-aos="fade-right">
               <img
                 src="/images/product_signage_img_01.png"
                 alt="사이니지 제품 이미지 1"
                 className={styles.productGalleryImage}
               />
             </div>
-            <div className={styles.imageRight}>
+            <div className={styles.imageRight} data-aos="fade-left">
               <img
                 src="/images/product_signage_img_02.png"
                 alt="사이니지 제품 이미지 2"
@@ -99,7 +99,7 @@ const Signage = () => {
           {/* 특징 섹션 */}
           <section className={styles.featuresSection}>
             {features.map((feature, index) => (
-              <div key={index} className={styles.featureItem}>
+              <div key={index} className={styles.featureItem} data-aos="fade-up" data-aos-delay={index * 100}>
                 <div className={styles.featureContent}>
                   <div className={styles.featureTitleWrapper}>
                     <img
@@ -117,11 +117,11 @@ const Signage = () => {
 
           {/* SPEC 섹션 */}
           <section className={styles.specSection}>
-            <h2 className={styles.productTitleEn}>SPEC</h2>
-            <h3 className={styles.productTitleKo}>제품 상세스펙</h3>
-            <div className={styles.divider}></div>
+            <h2 className={styles.productTitleEn} data-aos="fade-up">SPEC</h2>
+            <h3 className={styles.productTitleKo} data-aos="fade-up" data-aos-delay="50">제품 상세스펙</h3>
+            <div className={styles.divider} data-aos="fade-up" data-aos-delay="100"></div>
 
-            <table className={styles.table}>
+            <table className={styles.table} data-aos="fade-up" data-aos-delay="150">
               <thead>
                 <tr>
                   <th>구분</th>

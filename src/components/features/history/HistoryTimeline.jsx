@@ -5,7 +5,7 @@ const HistoryTimeline = ({ data }) => {
   return (
     <div className={styles.timeline}>
       {data.map((yearData, index) => (
-        <div key={index} className={styles.yearSection}>
+        <div key={index} className={styles.yearSection} data-aos="fade-up" data-aos-delay={index * 100}>
           {/* 좌측: 연도 */}
           <div className={styles.yearHeader}>
             <h3 className={styles.year}>{yearData.year}</h3>
