@@ -25,8 +25,8 @@ requireAuth();
 
 // 업로드 타입 확인
 $type = getParam('type');
-if (!$type || !in_array($type, ['reference', 'resource', 'certification'])) {
-    sendError('type은 reference, resource, certification 중 하나여야 합니다', 400);
+if (!$type || !in_array($type, ['reference', 'resource', 'certification', 'history'])) {
+    sendError('type은 reference, resource, certification, history 중 하나여야 합니다', 400);
 }
 
 // 파일이 업로드되었는지 확인
@@ -57,6 +57,12 @@ switch ($type) {
     case 'certification':
         $uploadDir = $uploadBaseDir . '/certifications';
         $allowedTypes = ['jpg', 'jpeg', 'png', 'gif', 'webp', 'pdf'];
+        $maxSize = 10485760; // 10MB
+        break;
+
+    case 'history':
+        $uploadDir = $uploadBaseDir . '/history';
+        $allowedTypes = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
         $maxSize = 10485760; // 10MB
         break;
 }

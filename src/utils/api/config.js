@@ -21,6 +21,9 @@ export const API_ENDPOINTS = {
   // 기술인증
   CERTIFICATIONS: '/certifications.php',
 
+  // 연혁
+  HISTORY: '/history.php',
+
   // 문의
   INQUIRIES: '/inquiries.php',
 

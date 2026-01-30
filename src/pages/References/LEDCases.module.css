@@ -13,6 +13,13 @@
   padding: 0 var(--container-padding);
 }
 
+.loading {
+  text-align: center;
+  padding: min(4.46429vw, 100px);
+  font-size: var(--font-size-body);
+  color: var(--color-gray-3);
+}
+
 /* Responsive Design */
 @media (max-width: 1240px) {
   .content {

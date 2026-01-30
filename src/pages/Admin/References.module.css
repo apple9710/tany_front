@@ -82,36 +82,6 @@
   font-size: var(--font-size-small);
 }
 
-/* PDF 표시 스타일 */
-.pdfWrapper {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.pdfWrapper canvas {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-}
-
-.pdfLoading {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: var(--color-gray-3);
-  font-size: var(--font-size-small);
-}
-
-.pdfError {
-  color: #c33;
-  font-size: var(--font-size-small);
-}
-
 .cardContent {
   padding: min(0.71429vw, 16px);
 }
@@ -193,7 +163,7 @@
   background: white;
   border-radius: min(0.35714vw, 8px);
   width: 100%;
-  max-width: min(26.78571vw, 600px);
+  max-width: min(35.71429vw, 800px);
   max-height: 90vh;
   overflow-y: auto;
 }
@@ -253,6 +223,7 @@
   font-size: var(--font-size-body);
   font-family: var(--font-family);
   transition: var(--transition-fast);
+  box-sizing: border-box;
 }
 
 .input:focus {
@@ -279,15 +250,6 @@
 .preview img {
   width: 100%;
   display: block;
-}
-
-.preview .pdfWrapper {
-  padding: min(0.71429vw, 16px);
-}
-
-.preview canvas {
-  max-width: 100%;
-  height: auto !important;
 }
 
 .hint {
@@ -335,6 +297,46 @@
   background: var(--color-primary-hover);
 }
 
+/* 텍스트 에디터 스타일 */
+.editorWrapper {
+  border: 1px solid #ddd;
+  border-radius: min(0.17857vw, 4px);
+  overflow: hidden;
+}
+
+.editorWrapper :global(.ql-toolbar) {
+  border: none;
+  border-bottom: 1px solid #ddd;
+  background: #fafafa;
+}
+
+.editorWrapper :global(.ql-container) {
+  border: none;
+  font-family: var(--font-family);
+  font-size: var(--font-size-body);
+  min-height: 200px;
+}
+
+.editorWrapper :global(.ql-editor) {
+  min-height: 200px;
+  padding: min(0.71429vw, 16px);
+}
+
+.editorWrapper :global(.ql-editor.ql-blank::before) {
+  font-style: normal;
+  color: var(--color-gray-3);
+  left: min(0.71429vw, 16px);
+}
+
+.editorWrapper :global(.ql-editor:focus) {
+  outline: none;
+}
+
+.editorWrapper:focus-within {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 min(0.17857vw, 4px) rgba(242, 105, 102, 0.1);
+}
+
 /* 반응형 */
 @media (max-width: 768px) {
   .header {
@@ -349,5 +351,13 @@
 
   .modal {
     margin: 20px;
+  }
+
+  .editorWrapper :global(.ql-container) {
+    min-height: 150px;
+  }
+
+  .editorWrapper :global(.ql-editor) {
+    min-height: 150px;
   }
 }

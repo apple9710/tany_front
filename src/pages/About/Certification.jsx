@@ -1,9 +1,15 @@
+import { useState, useEffect } from 'react'
+import { get } from '../../utils/api/client'
+import { API_ENDPOINTS } from '../../utils/api/config'
 import SubPageBanner from '../../components/layout/SubPageBanner'
 import PageTitle from '../../components/common/PageTitle'
 import CertificationList from '../../components/features/certification/CertificationList'
 import styles from './Certification.module.css'
 
 const Certification = () => {
+  const [certificationData, setCertificationData] = useState([])
+  const [loading, setLoading] = useState(true)
+
   const subMenuItems = [
     { path: '/about/history', label: '연혁' },
     { path: '/about/certification', label: '기술인증' },
@@ -11,20 +17,21 @@ const Certification = () => {
     { path: '/about/location', label: '오시는 길' }
   ]
 
-  const certificationData = [
-    { title: '여성기업확인서', image: '' },
-    { title: '여성기업확인서', image: '' },
-    { title: '여성기업확인서', image: '' },
-    { title: '여성기업확인서', image: '' },
-    { title: '여성기업확인서', image: '' },
-    { title: '여성기업확인서', image: '' },
-    { title: '여성기업확인서', image: '' },
-    { title: '여성기업확인서', image: '' },
-    { title: '여성기업확인서', image: '' },
-    { title: '여성기업확인서', image: '' },
-    { title: '여성기업확인서', image: '' },
-    { title: '여성기업확인서', image: '' }
-  ]
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await get(API_ENDPOINTS.CERTIFICATIONS)
+        if (response.success && response.data?.items) {
+          setCertificationData(response.data.items)
+        }
+      } catch (error) {
+        console.error('기술인증 데이터 로드 실패:', error)
+      } finally {
+        setLoading(false)
+      }
+    }
+    fetchData()
+  }, [])
 
   return (
     <div className={styles.page}>
@@ -38,7 +45,11 @@ const Certification = () => {
       <main className={styles.content}>
         <div className={styles.container}>
           <PageTitle titleEn="CERTIFICATION" titleKo="기술인증" />
-          <CertificationList data={certificationData} />
+          {loading ? (
+            <div className={styles.loading}>로딩 중...</div>
+          ) : (
+            <CertificationList data={certificationData} />
+          )}
         </div>
       </main>
     </div>

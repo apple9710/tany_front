@@ -20,6 +20,7 @@ import AdminLogin from './pages/Admin/Login'
 import AdminLayout from './components/admin/AdminLayout'
 import Dashboard from './pages/Admin/Dashboard'
 import Certifications from './pages/Admin/Certifications'
+import AdminHistory from './pages/Admin/History'
 import AdminReferences from './pages/Admin/References'
 import AdminResources from './pages/Admin/Resources'
 import Inquiries from './pages/Admin/Inquiries'
@@ -40,6 +41,7 @@ function App() {
         {/* 어드민 페이지 (레이아웃 포함) */}
         <Route path="/admin/*" element={<AdminLayout />}>
           <Route path="dashboard" element={<Dashboard />} />
+          <Route path="history" element={<AdminHistory />} />
           <Route path="references" element={<AdminReferences />} />
           <Route path="resources" element={<AdminResources />} />
           <Route path="certifications" element={<Certifications />} />

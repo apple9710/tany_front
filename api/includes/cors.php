@@ -4,12 +4,16 @@
  */
 
 function initCors() {
-    // 허용할 Origin (개발 환경)
+    // 허용할 Origin (개발 + 운영 환경)
     $allowedOrigins = [
         'http://localhost:3521',
         'http://localhost:3000',
         'http://127.0.0.1:3521',
-        'http://127.0.0.1:3000'
+        'http://127.0.0.1:3000',
+        'http://tanycompany.com',
+        'https://tanycompany.com',
+        'http://www.tanycompany.com',
+        'https://www.tanycompany.com'
     ];
 
     $origin = $_SERVER['HTTP_ORIGIN'] ?? '';

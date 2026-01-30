@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { post } from '../../utils/api/client'
+import { API_ENDPOINTS } from '../../utils/api/config'
 import SubPageBanner from '../../components/layout/SubPageBanner'
 import PageTitle from '../../components/common/PageTitle'
 import styles from './Inquiry.module.css'
@@ -28,7 +30,9 @@ const Inquiry = () => {
     }))
   }
 
-  const handleSubmit = (e) => {
+  const [submitting, setSubmitting] = useState(false)
+
+  const handleSubmit = async (e) => {
     e.preventDefault()
 
     // 필수 항목 체크
@@ -42,9 +46,34 @@ const Inquiry = () => {
       return
     }
 
-    // 폼 제출 로직 (추후 구현)
-    console.log('Form submitted:', formData)
-    alert('문의가 접수되었습니다.')
+    setSubmitting(true)
+    try {
+      const response = await post(API_ENDPOINTS.INQUIRIES, {
+        name: formData.name,
+        company: formData.company || null,
+        phone: formData.phone,
+        email: formData.email || null,
+        message: formData.message
+      })
+
+      if (response.success) {
+        alert('문의가 접수되었습니다. 빠른 시일 내에 연락드리겠습니다.')
+        // 폼 초기화
+        setFormData({
+          name: '',
+          company: '',
+          phone: '',
+          email: '',
+          message: '',
+          agreePrivacy: false
+        })
+      }
+    } catch (error) {
+      alert('문의 접수에 실패했습니다. 잠시 후 다시 시도해주세요.')
+      console.error('문의 접수 실패:', error)
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   return (
@@ -183,8 +212,8 @@ const Inquiry = () => {
 
             {/* 제출 버튼 */}
             <div className={styles.submitWrapper} data-aos="fade-up" data-aos-delay="350">
-              <button type="submit" className={styles.submitButton}>
-                문의하기
+              <button type="submit" className={styles.submitButton} disabled={submitting}>
+                {submitting ? '접수 중...' : '문의하기'}
               </button>
             </div>
           </form>

@@ -49,6 +49,10 @@ const AdminLayout = () => {
       label: '대시보드'
     },
     {
+      path: '/admin/history',
+      label: '연혁 관리'
+    },
+    {
       path: '/admin/references',
       label: '설치사례 관리'
     },

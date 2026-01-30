@@ -1,7 +1,20 @@
 import { useState, useEffect } from 'react'
+import { Document, Page, pdfjs } from 'react-pdf'
+import 'react-pdf/dist/Page/AnnotationLayer.css'
+import 'react-pdf/dist/Page/TextLayer.css'
 import { get, post, put, del, uploadFile } from '../../utils/api/client'
 import { API_ENDPOINTS } from '../../utils/api/config'
 import styles from './Certifications.module.css'
+
+// PDF.js worker 설정
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`
+
+// PDF 옵션 (한글 폰트 지원을 위한 CMap 설정)
+const pdfOptions = {
+  cMapUrl: `//unpkg.com/pdfjs-dist@${pdfjs.version}/cmaps/`,
+  cMapPacked: true,
+  standardFontDataUrl: `//unpkg.com/pdfjs-dist@${pdfjs.version}/standard_fonts/`
+}
 
 const Certifications = () => {
   const [items, setItems] = useState([])
@@ -14,6 +27,54 @@ const Certifications = () => {
     display_order: 0
   })
   const [uploadingImage, setUploadingImage] = useState(false)
+
+  // 파일 경로 처리 (uploads는 루트에 있음)
+  const getFileUrl = (filePath) => {
+    if (!filePath) return null
+    if (filePath.startsWith('http')) return filePath
+    if (filePath.startsWith('/uploads')) {
+      return `${window.location.origin}${filePath}`
+    }
+    return filePath
+  }
+
+  // PDF 파일인지 확인
+  const isPdf = (filePath) => {
+    return filePath && filePath.toLowerCase().endsWith('.pdf')
+  }
+
+  // PDF 썸네일 컴포넌트
+  const PdfThumbnail = ({ file, width = 200 }) => {
+    const [pdfLoading, setPdfLoading] = useState(true)
+    const [pdfError, setPdfError] = useState(false)
+
+    if (pdfError) {
+      return <div className={styles.pdfError}>PDF 로드 실패</div>
+    }
+
+    return (
+      <div className={styles.pdfWrapper}>
+        {pdfLoading && <div className={styles.pdfLoading}>PDF 로딩...</div>}
+        <Document
+          file={file}
+          options={pdfOptions}
+          onLoadSuccess={() => setPdfLoading(false)}
+          onLoadError={() => {
+            setPdfLoading(false)
+            setPdfError(true)
+          }}
+          loading=""
+        >
+          <Page
+            pageNumber={1}
+            width={width}
+            renderTextLayer={false}
+            renderAnnotationLayer={false}
+          />
+        </Document>
+      </div>
+    )
+  }
 
   useEffect(() => {
     loadData()
@@ -32,7 +93,7 @@ const Certifications = () => {
     }
   }
 
-  const handleImageUpload = async (e) => {
+  const handleFileUpload = async (e) => {
     const file = e.target.files[0]
     if (!file) return
 
@@ -41,10 +102,10 @@ const Certifications = () => {
       const response = await uploadFile(API_ENDPOINTS.UPLOAD, file, { type: 'certification' })
       if (response.success) {
         setFormData(prev => ({ ...prev, image: response.data.file_path }))
-        alert('이미지 업로드 완료')
+        alert('PDF 업로드 완료')
       }
     } catch (error) {
-      alert('이미지 업로드 실패: ' + error.message)
+      alert('PDF 업로드 실패: ' + error.message)
     } finally {
       setUploadingImage(false)
     }
@@ -54,7 +115,7 @@ const Certifications = () => {
     e.preventDefault()
 
     if (!formData.title || !formData.image) {
-      alert('제목과 이미지는 필수입니다')
+      alert('제목과 PDF 파일은 필수입니다')
       return
     }
 
@@ -124,9 +185,13 @@ const Certifications = () => {
           <div key={item.id} className={styles.card}>
             <div className={styles.imageWrapper}>
               {item.image ? (
-                <img src={item.image} alt={item.title} className={styles.image} />
+                isPdf(item.image) ? (
+                  <PdfThumbnail file={getFileUrl(item.image)} width={180} />
+                ) : (
+                  <img src={getFileUrl(item.image)} alt={item.title} className={styles.image} />
+                )
               ) : (
-                <div className={styles.noImage}>이미지 없음</div>
+                <div className={styles.noImage}>파일 없음</div>
               )}
             </div>
             <div className={styles.cardContent}>
@@ -176,20 +241,25 @@ const Certifications = () => {
               </div>
 
               <div className={styles.formGroup}>
-                <label className={styles.label}>이미지 *</label>
+                <label className={styles.label}>PDF 파일 *</label>
                 <input
                   type="file"
                   className={styles.fileInput}
-                  accept="image/*"
-                  onChange={handleImageUpload}
+                  accept=".pdf"
+                  onChange={handleFileUpload}
                   disabled={uploadingImage}
                 />
                 {uploadingImage && <p className={styles.uploadingText}>업로드 중...</p>}
                 {formData.image && (
                   <div className={styles.preview}>
-                    <img src={formData.image} alt="미리보기" />
+                    {isPdf(formData.image) ? (
+                      <PdfThumbnail file={getFileUrl(formData.image)} width={300} />
+                    ) : (
+                      <img src={getFileUrl(formData.image)} alt="미리보기" />
+                    )}
                   </div>
                 )}
+                <small className={styles.hint}>PDF 파일만 업로드 가능합니다</small>
               </div>
 
               <div className={styles.formGroup}>

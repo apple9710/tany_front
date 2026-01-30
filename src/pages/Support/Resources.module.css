@@ -13,6 +13,14 @@
   padding: 0 var(--container-padding);
 }
 
+.loading,
+.empty {
+  text-align: center;
+  padding: min(4.46429vw, 100px);
+  font-size: var(--font-size-body);
+  color: var(--color-gray-3);
+}
+
 /* 자료 목록 */
 .resourcesList {
   margin-top: 80px;

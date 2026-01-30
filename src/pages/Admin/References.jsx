@@ -1,7 +1,31 @@
 import { useState, useEffect } from 'react'
+import ReactQuill from 'react-quill-new'
+import 'react-quill-new/dist/quill.snow.css'
 import { get, post, put, del, uploadFile } from '../../utils/api/client'
 import { API_ENDPOINTS } from '../../utils/api/config'
-import styles from './Certifications.module.css' // 같은 스타일 재사용
+import styles from './References.module.css'
+
+// Quill 에디터 설정
+const quillModules = {
+  toolbar: [
+    [{ 'header': [1, 2, 3, false] }],
+    ['bold', 'italic', 'underline', 'strike'],
+    [{ 'color': [] }, { 'background': [] }],
+    [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+    [{ 'align': [] }],
+    ['link'],
+    ['clean']
+  ]
+}
+
+const quillFormats = [
+  'header',
+  'bold', 'italic', 'underline', 'strike',
+  'color', 'background',
+  'list', 'bullet',
+  'align',
+  'link'
+]
 
 const References = () => {
   const [items, setItems] = useState([])
@@ -17,6 +41,16 @@ const References = () => {
     description: ''
   })
   const [uploadingImage, setUploadingImage] = useState(false)
+
+  // 이미지 경로 처리 (uploads는 루트에 있음)
+  const getImageUrl = (imagePath) => {
+    if (!imagePath) return null
+    if (imagePath.startsWith('http')) return imagePath
+    if (imagePath.startsWith('/uploads')) {
+      return `${window.location.origin}${imagePath}`
+    }
+    return imagePath
+  }
 
   useEffect(() => {
     loadData()
@@ -173,7 +207,7 @@ const References = () => {
           <div key={item.id} className={styles.card}>
             <div className={styles.imageWrapper}>
               {item.image ? (
-                <img src={item.image} alt={item.title} className={styles.image} />
+                <img src={getImageUrl(item.image)} alt={item.title} className={styles.image} />
               ) : (
                 <div className={styles.noImage}>이미지 없음</div>
               )}
@@ -253,14 +287,16 @@ const References = () => {
 
               <div className={styles.formGroup}>
                 <label className={styles.label}>설명</label>
-                <textarea
-                  className={styles.input}
-                  value={formData.description}
-                  onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                  placeholder="설치사례에 대한 설명을 입력하세요"
-                  rows="3"
-                  style={{ resize: 'vertical' }}
-                />
+                <div className={styles.editorWrapper}>
+                  <ReactQuill
+                    theme="snow"
+                    value={formData.description}
+                    onChange={(value) => setFormData({ ...formData, description: value })}
+                    modules={quillModules}
+                    formats={quillFormats}
+                    placeholder="설치사례에 대한 설명을 입력하세요"
+                  />
+                </div>
               </div>
 
               <div className={styles.formGroup}>
@@ -275,7 +311,7 @@ const References = () => {
                 {uploadingImage && <p className={styles.uploadingText}>업로드 중...</p>}
                 {formData.image && (
                   <div className={styles.preview}>
-                    <img src={formData.image} alt="미리보기" />
+                    <img src={getImageUrl(formData.image)} alt="미리보기" />
                   </div>
                 )}
               </div>

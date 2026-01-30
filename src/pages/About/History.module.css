@@ -12,3 +12,16 @@
   margin: 0 auto;
   padding: 0 var(--container-padding);
 }
+
+.loading,
+.error,
+.empty {
+  text-align: center;
+  padding: min(4.46429vw, 100px) 0;
+  font-size: min(1.16071vw, 26px);
+  color: #8D8D8D;
+}
+
+.error {
+  color: #F26966;
+}
