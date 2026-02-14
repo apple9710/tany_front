@@ -15,22 +15,30 @@ const Location = () => {
     {
       name: '전주지사',
       address: '전북 전주시 덕진구 기린대로 281, 1층, 2층',
-      image: '/images/main_map_img.png'
+      lat: 35.8468,
+      lng: 127.1294,
+      mapUrl: 'https://naver.me/xiLQGsZR'
     },
     {
       name: '대전지사',
       address: '대전광역시 중구 오류동 199-1 킹콩LED',
-      image: '/images/main_map_img.png'
+      lat: 36.3254,
+      lng: 127.4214,
+      mapUrl: 'https://map.naver.com/p/search/대전광역시 중구 오류동 199-1'
     },
     {
       name: '서울지사',
       address: '서울특별시 강남구 선릉로 704, 상가동 12층 1235-3호 청담벤처프라자',
-      image: '/images/main_map_img.png'
+      lat: 37.5242,
+      lng: 127.0476,
+      mapUrl: 'https://map.naver.com/p/search/서울특별시 강남구 선릉로 704'
     },
     {
       name: '김제공장',
       address: '전북 김제시 월촌공단길 33, 1동, 2동(월촌농공단지)',
-      image: '/images/main_map_img.png'
+      lat: 35.7870,
+      lng: 126.8530,
+      mapUrl: 'https://map.naver.com/p/search/전북 김제시 월촌공단길 33'
     }
   ]
 

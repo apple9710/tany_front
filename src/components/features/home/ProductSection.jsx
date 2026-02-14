@@ -1,16 +1,18 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import styles from './ProductSection.module.css'
 
 const ProductSection = () => {
   const [activeTab, setActiveTab] = useState(0)
+  const navigate = useNavigate()
 
   const tabs = [
-    { id: 0, label: '실내형' },
-    { id: 1, label: '실외형' },
-    { id: 2, label: '현수막형' },
-    { id: 3, label: '스텐드형' },
-    { id: 4, label: '사이니지' },
-    { id: 5, label: '비디오월' }
+    { id: 0, label: '실내형', path: '/products/indoor-led' },
+    { id: 1, label: '실외형', path: '/products/indoor-led' },
+    { id: 2, label: '현수막형', path: '/products/banner-led' },
+    { id: 3, label: '스텐드형', path: '/products/stand-led' },
+    { id: 4, label: '사이니지', path: '/products/signage' },
+    { id: 5, label: '비디오월', path: '/products/indoor-led' }
   ]
 
   const tabContent = {
@@ -60,7 +62,7 @@ const ProductSection = () => {
             <p className={styles.description}>{tabContent.description}</p>
 
             {/* 버튼 */}
-            <button className={styles.button}>보러가기 &gt;</button>
+            <button className={styles.button} onClick={() => navigate(tabs[activeTab].path)}>보러가기 &gt;</button>
           </div>
 
           {/* 이미지 영역 */}

@@ -27,7 +27,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: min(1.25vw, 28px);
-  font-size: min(0.625vw, 14px);
+  font-size: min(0.71429vw, 16px);
   line-height: 1.6;
   margin-bottom: min(0.53571vw, 12px);
 }
@@ -51,7 +51,7 @@
 
 /* 카피라이트 */
 .copyright {
-  font-size: min(0.625vw, 14px);
+  font-size: min(0.71429vw, 16px);
   color: #FFFFFF;
   margin: 0;
 }
@@ -73,7 +73,7 @@
 
   .infoRow {
     gap: 24px;
-    font-size: 13px;
+    font-size: 15px;
     margin-bottom: 10px;
   }
 
@@ -82,7 +82,7 @@
   }
 
   .copyright {
-    font-size: 13px;
+    font-size: 15px;
   }
 }
 
@@ -102,7 +102,7 @@
 
   .infoRow {
     gap: 20px;
-    font-size: 13px;
+    font-size: 15px;
     margin-bottom: 10px;
   }
 
@@ -111,7 +111,7 @@
   }
 
   .copyright {
-    font-size: 13px;
+    font-size: 15px;
   }
 }
 
@@ -136,7 +136,7 @@
   .infoRow {
     flex-direction: column;
     gap: 10px;
-    font-size: 12px;
+    font-size: 14px;
     margin-bottom: 16px;
   }
 
@@ -147,7 +147,7 @@
   }
 
   .copyright {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
@@ -171,7 +171,7 @@
 
   .infoRow {
     gap: 8px;
-    font-size: 11px;
+    font-size: 13px;
     margin-bottom: 14px;
   }
 
@@ -180,6 +180,6 @@
   }
 
   .copyright {
-    font-size: 11px;
+    font-size: 13px;
   }
 }

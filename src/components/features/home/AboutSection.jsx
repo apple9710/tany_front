@@ -1,7 +1,9 @@
+import { useNavigate } from 'react-router-dom'
 import styles from './AboutSection.module.css'
 import { getPublicUrl } from '../../../utils/getPublicUrl'
 
 const AboutSection = () => {
+  const navigate = useNavigate()
   return (
     <section className={styles.section}>
       <div className={styles.container}>
@@ -21,7 +23,7 @@ const AboutSection = () => {
         </div>
 
         {/* 버튼 */}
-        <button className={styles.button} data-aos="fade-up" data-aos-delay="300">
+        <button className={styles.button} data-aos="fade-up" data-aos-delay="300" onClick={() => navigate('/references/led-cases')}>
           설치사례 &gt;
         </button>
       </div>

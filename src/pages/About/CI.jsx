@@ -13,7 +13,7 @@ const CI = () => {
   return (
     <div className={styles.page}>
       <SubPageBanner
-        backgroundImage="/images/sub_CI_banner_img.png"
+        backgroundImage="/images/ci_banner_img.jpg"
         titleEn="CI"
         titleKo="기업아이덴티티"
         subMenuItems={subMenuItems}

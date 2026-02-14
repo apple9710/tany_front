@@ -28,7 +28,7 @@
 }
 
 .logoImage {
-  width: min(4.59821vw, 103px);
+  width: min(5.80357vw, 130px);
   height: auto;
   object-fit: contain;
 }
@@ -94,7 +94,7 @@
   }
 
   .logoImage {
-    width: 95px;
+    width: 120px;
   }
 
   .nav {
@@ -113,7 +113,7 @@
   }
 
   .logoImage {
-    width: 85px;
+    width: 105px;
   }
 
   /* 네비게이션 숨김 */
@@ -133,7 +133,7 @@
   }
 
   .logoImage {
-    width: 75px;
+    width: 92px;
   }
 
   .menuButton {
@@ -154,7 +154,7 @@
   }
 
   .logoImage {
-    width: 70px;
+    width: 85px;
   }
 
   .menuButton {

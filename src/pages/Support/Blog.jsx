@@ -11,8 +11,7 @@ const Blog = () => {
   ]
 
   const handleBlogClick = () => {
-    // 블로그 URL로 이동 (추후 실제 URL로 변경)
-    window.open('https://blog.naver.com/tany', '_blank', 'noopener,noreferrer')
+    window.open('https://blog.naver.com/tanycompany_kr', '_blank', 'noopener,noreferrer')
   }
 
   return (

@@ -11,8 +11,7 @@ const Instagram = () => {
   ]
 
   const handleInstagramClick = () => {
-    // 인스타그램 URL로 이동 (추후 실제 URL로 변경)
-    window.open('https://www.instagram.com/tany', '_blank', 'noopener,noreferrer')
+    window.open('https://www.instagram.com/tanycompany/', '_blank', 'noopener,noreferrer')
   }
 
   return (

@@ -30,17 +30,12 @@
   margin-bottom: min(2.5vw, 56px);
 }
 
-.imageWrapper {
+.mapWrapper {
   max-width: min(62.5vw, 1400px);
   width: 100%;
   margin-bottom: min(2.67857vw, 60px);
-}
-
-.image {
-  width: 100%;
-  height: auto;
   border-radius: min(0.66964vw, 15px);
-  display: block;
+  overflow: hidden;
 }
 
 .button {
@@ -86,12 +81,8 @@
     margin-bottom: 50px;
   }
 
-  .imageWrapper {
+  .mapWrapper {
     margin-bottom: 50px;
-    border-radius: 14px;
-  }
-
-  .image {
     border-radius: 14px;
   }
 
@@ -123,7 +114,7 @@
     margin-bottom: 45px;
   }
 
-  .imageWrapper {
+  .mapWrapper {
     margin-bottom: 45px;
   }
 
@@ -155,12 +146,9 @@
     margin-bottom: 40px;
   }
 
-  .imageWrapper {
+  .mapWrapper {
     max-width: 100%;
     margin-bottom: 40px;
-  }
-
-  .image {
     border-radius: 12px;
   }
 
@@ -193,11 +181,8 @@
     margin-bottom: 35px;
   }
 
-  .imageWrapper {
+  .mapWrapper {
     margin-bottom: 35px;
-  }
-
-  .image {
     border-radius: 10px;
   }
 

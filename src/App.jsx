@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import ErrorBoundary from './components/common/ErrorBoundary'
 import Header from './components/layout/Header'
 import Footer from './components/layout/Footer'
 import Home from './pages/Home'
@@ -32,6 +33,7 @@ import './App.css'
 
 function App() {
   return (
+    <ErrorBoundary>
     <Router>
       <Routes>
         {/* 어드민 로그인 */}
@@ -74,6 +76,7 @@ function App() {
         } />
       </Routes>
     </Router>
+    </ErrorBoundary>
   )
 }
 

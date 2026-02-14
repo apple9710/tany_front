@@ -1,7 +1,10 @@
+import { useNavigate } from 'react-router-dom'
 import styles from './LocationSection.module.css'
 import { getPublicUrl } from '../../../utils/getPublicUrl'
 
 const LocationSection = () => {
+  const navigate = useNavigate()
+
   return (
     <section className={styles.section}>
       <div className={styles.container}>
@@ -21,7 +24,7 @@ const LocationSection = () => {
         </div>
 
         {/* 버튼 */}
-        <button className={styles.button} data-aos="fade-up" data-aos-delay="300">
+        <button className={styles.button} onClick={() => navigate('/about/location')} data-aos="fade-up" data-aos-delay="300">
           지도 보러가기 &gt;
         </button>
       </div>
