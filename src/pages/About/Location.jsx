@@ -15,16 +15,16 @@ const Location = () => {
     {
       name: '전주지사',
       address: '전북 전주시 덕진구 기린대로 281, 1층, 2층',
-      lat: 35.8468,
-      lng: 127.1294,
+      lat: 35.83015,
+      lng: 127.14125,
       mapUrl: 'https://naver.me/xiLQGsZR'
     },
     {
       name: '대전지사',
       address: '대전광역시 중구 오류동 199-1 킹콩LED',
-      lat: 36.3254,
-      lng: 127.4214,
-      mapUrl: 'https://map.naver.com/p/search/대전광역시 중구 오류동 199-1'
+      lat: 36.3300,
+      lng: 127.4034,
+      mapUrl: 'https://naver.me/GkUyhO7Q'
     },
     {
       name: '서울지사',
