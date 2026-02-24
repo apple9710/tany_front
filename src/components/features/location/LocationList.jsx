@@ -13,7 +13,7 @@ const LocationList = ({ data }) => {
           <h3 className={styles.title}>{item.name}</h3>
           <p className={styles.address}>{item.address}</p>
           <div className={styles.mapWrapper}>
-            <NaverMap lat={item.lat} lng={item.lng} name={item.name} />
+            <NaverMap address={item.address} name={item.name} />
           </div>
           <button className={styles.button} onClick={() => handleMapClick(item.mapUrl)}>지도 보러가기 &gt;</button>
         </div>
