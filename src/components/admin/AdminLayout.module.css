@@ -104,6 +104,51 @@
   flex-shrink: 0;
 }
 
+/* 그룹 메뉴 */
+.navGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.groupHeader {
+  background: none;
+  border: none;
+  border-left: min(0.17857vw, 4px) solid transparent;
+  width: 100%;
+  text-align: left;
+  font-family: var(--font-family);
+  cursor: pointer;
+  justify-content: space-between;
+}
+
+.groupHeader.groupOpen {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.caret {
+  font-size: min(0.85714vw, 18px);
+  color: rgba(255, 255, 255, 0.5);
+  margin-left: min(0.35714vw, 8px);
+}
+
+.sidebar.closed .caret {
+  display: none;
+}
+
+.groupChildren {
+  display: flex;
+  flex-direction: column;
+}
+
+.groupChild {
+  padding-left: min(2.14286vw, 48px);
+  font-size: var(--font-size-small);
+}
+
+.sidebar.closed .groupChild {
+  padding-left: min(1.07143vw, 24px);
+}
+
 .label {
   font-size: var(--font-size-body);
   white-space: nowrap;

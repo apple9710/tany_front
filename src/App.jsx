@@ -26,6 +26,7 @@ import AdminReferences from './pages/Admin/References'
 import AdminResources from './pages/Admin/Resources'
 import Inquiries from './pages/Admin/Inquiries'
 import ResetPassword from './pages/Admin/ResetPassword'
+import MainProducts from './pages/Admin/MainProducts'
 import './styles/variables.css'
 import './styles/reset.css'
 import './styles/font.css'
@@ -43,6 +44,7 @@ function App() {
         {/* 어드민 페이지 (레이아웃 포함) */}
         <Route path="/admin/*" element={<AdminLayout />}>
           <Route path="dashboard" element={<Dashboard />} />
+          <Route path="main/products" element={<MainProducts />} />
           <Route path="history" element={<AdminHistory />} />
           <Route path="references" element={<AdminReferences />} />
           <Route path="resources" element={<AdminResources />} />

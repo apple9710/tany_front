@@ -42,33 +42,36 @@ const AdminLayout = () => {
     }
   }
 
-  // 메뉴 항목
+  // 메뉴 항목 (group이 있으면 그룹 메뉴, 없으면 단일 링크)
   const menuItems = [
+    { path: '/admin/dashboard', label: '대시보드' },
     {
-      path: '/admin/dashboard',
-      label: '대시보드'
+      group: '메인관리',
+      children: [
+        { path: '/admin/main/products', label: '프로덕트' }
+      ]
     },
-    {
-      path: '/admin/history',
-      label: '연혁 관리'
-    },
-    {
-      path: '/admin/references',
-      label: '설치사례 관리'
-    },
-    {
-      path: '/admin/resources',
-      label: '자료실 관리'
-    },
-    {
-      path: '/admin/certifications',
-      label: '기술인증 관리'
-    },
-    {
-      path: '/admin/inquiries',
-      label: '문의 관리'
-    }
+    { path: '/admin/history', label: '연혁 관리' },
+    { path: '/admin/references', label: '설치사례 관리' },
+    { path: '/admin/resources', label: '자료실 관리' },
+    { path: '/admin/certifications', label: '기술인증 관리' },
+    { path: '/admin/inquiries', label: '문의 관리' }
   ]
+
+  // 그룹 펼침 상태 — 현재 활성 경로가 그룹 자식이면 자동 펼침
+  const [openGroups, setOpenGroups] = useState(() => {
+    const initial = {}
+    menuItems.forEach(item => {
+      if (item.group) {
+        initial[item.group] = item.children?.some(c => location.pathname.startsWith(c.path)) ?? false
+      }
+    })
+    return initial
+  })
+
+  const toggleGroup = (group) => {
+    setOpenGroups(prev => ({ ...prev, [group]: !prev[group] }))
+  }
 
   if (loading) {
     return (
@@ -89,17 +92,49 @@ const AdminLayout = () => {
         </div>
 
         <nav className={styles.nav}>
-          {menuItems.map((item) => (
-            <Link
-              key={item.path}
-              to={item.path}
-              className={`${styles.navItem} ${
-                location.pathname === item.path ? styles.active : ''
-              }`}
-            >
-              <span className={styles.label}>{item.label}</span>
-            </Link>
-          ))}
+          {menuItems.map((item) => {
+            if (item.group) {
+              const isOpen = openGroups[item.group]
+              return (
+                <div key={item.group} className={styles.navGroup}>
+                  <button
+                    type="button"
+                    className={`${styles.navItem} ${styles.groupHeader} ${isOpen ? styles.groupOpen : ''}`}
+                    onClick={() => toggleGroup(item.group)}
+                  >
+                    <span className={styles.label}>{item.group}</span>
+                    <span className={styles.caret}>{isOpen ? '−' : '+'}</span>
+                  </button>
+                  {isOpen && (
+                    <div className={styles.groupChildren}>
+                      {item.children.map(child => (
+                        <Link
+                          key={child.path}
+                          to={child.path}
+                          className={`${styles.navItem} ${styles.groupChild} ${
+                            location.pathname === child.path ? styles.active : ''
+                          }`}
+                        >
+                          <span className={styles.label}>{child.label}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              )
+            }
+            return (
+              <Link
+                key={item.path}
+                to={item.path}
+                className={`${styles.navItem} ${
+                  location.pathname === item.path ? styles.active : ''
+                }`}
+              >
+                <span className={styles.label}>{item.label}</span>
+              </Link>
+            )
+          })}
         </nav>
 
         <div className={styles.sidebarFooter}>

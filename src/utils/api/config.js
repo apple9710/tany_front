@@ -27,6 +27,9 @@ export const API_ENDPOINTS = {
   // 문의
   INQUIRIES: '/inquiries.php',
 
+  // 메인 프로덕트 섹션
+  MAIN_PRODUCTS: '/main_products.php',
+
   // 파일 업로드
   UPLOAD: '/upload.php'
 }
